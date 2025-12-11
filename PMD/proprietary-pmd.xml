@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.55.0" timestamp="2025-11-29T19:44:47.050">
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\audit\AuditUtils.java">
+<violation beginline="281" endline="283" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Error Prone" package="stirling.software.proprietary.audit" class="AuditUtils" method="addTimingData" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\audit\ControllerAuditAspect.java">
+<violation beginline="121" endline="121" begincolumn="28" endcolumn="30" rule="UnusedLocalVariable" ruleset="Best Practices" package="stirling.software.proprietary.audit" class="ControllerAuditAspect" method="auditController" variable="req" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'req'.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\CustomAuthenticationFailureHandler.java">
+<violation beginline="82" endline="82" begincolumn="20" endcolumn="46" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security" class="CustomAuthenticationFailureHandler" method="onAuthenticationFailure" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\CustomLogoutSuccessHandler.java">
+<violation beginline="231" endline="231" begincolumn="20" endcolumn="78" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.proprietary.security" class="CustomLogoutSuccessHandler" method="checkForErrors" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+<violation beginline="239" endline="239" begincolumn="20" endcolumn="73" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.proprietary.security" class="CustomLogoutSuccessHandler" method="checkForErrors" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\configuration\ee\EEAppConfig.java">
+<violation beginline="84" endline="84" begincolumn="20" endcolumn="57" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.configuration.ee" class="EEAppConfig" method="migrateEnterpriseSettingsToPremium" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\configuration\ee\KeygenLicenseVerifier.java">
+<violation beginline="148" endline="148" begincolumn="18" endcolumn="33" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.configuration.ee" class="KeygenLicenseVerifier" method="verifyCertificateLicense" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="297" endline="297" begincolumn="33" endcolumn="33" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.configuration.ee" class="KeygenLicenseVerifier" method="verifyJWTLicense" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="479" endline="479" begincolumn="25" endcolumn="36" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.configuration.ee" class="KeygenLicenseVerifier" method="verifyStandardLicense" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="480" endline="480" begincolumn="32" endcolumn="44" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.configuration.ee" class="KeygenLicenseVerifier" method="verifyStandardLicense" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="481" endline="481" begincolumn="32" endcolumn="59" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.configuration.ee" class="KeygenLicenseVerifier" method="verifyStandardLicense" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="536" endline="536" begincolumn="38" endcolumn="40" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.configuration.ee" class="KeygenLicenseVerifier" method="validateLicense" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="765" endline="765" begincolumn="38" endcolumn="40" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.configuration.ee" class="KeygenLicenseVerifier" method="activateMachine" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="811" endline="811" begincolumn="38" endcolumn="40" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.configuration.ee" class="KeygenLicenseVerifier" method="fetchMachinesForLicense" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="843" endline="843" begincolumn="42" endcolumn="44" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.configuration.ee" class="KeygenLicenseVerifier" method="deregisterMachine" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\controller\api\AdminSettingsController.java">
+<violation beginline="494" endline="494" begincolumn="28" endcolumn="28" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.controller.api" class="AdminSettingsController" method="getSettingByKey" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="539" endline="539" begincolumn="33" endcolumn="33" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.controller.api" class="AdminSettingsController" method="getNestedProperty" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="590" endline="590" begincolumn="13" endcolumn="17" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.controller.api" class="AdminSettingsController" method="isSensitiveFieldWithPath" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="590" endline="590" begincolumn="41" endcolumn="53" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.controller.api" class="AdminSettingsController" method="isSensitiveFieldWithPath" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\database\repository\JPATokenRepositoryImpl.java">
+<violation beginline="59" endline="60" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Error Prone" package="stirling.software.proprietary.security.database.repository" class="JPATokenRepositoryImpl" method="removeUserTokens" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\filter\FirstLoginFilter.java">
+<violation beginline="54" endline="54" begincolumn="17" endcolumn="21" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.filter" class="FirstLoginFilter" method="doFilterInternal" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\filter\IPRateLimitingFilter.java">
+<violation beginline="46" endline="46" begincolumn="18" endcolumn="22" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.filter" class="IPRateLimitingFilter" method="doFilter" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\filter\UserAuthenticationFilter.java">
+<violation beginline="113" endline="113" begincolumn="17" endcolumn="21" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.filter" class="UserAuthenticationFilter" method="doFilterInternal" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\filter\UserBasedRateLimitingFilter.java">
+<violation beginline="54" endline="54" begincolumn="14" endcolumn="19" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.filter" class="UserBasedRateLimitingFilter" method="doFilterInternal" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="104" endline="106" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Error Prone" package="stirling.software.proprietary.security.filter" class="UserBasedRateLimitingFilter" method="getRoleFromAuthentication" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\model\ApiKeyAuthenticationToken.java">
+<violation beginline="15" endline="15" begincolumn="26" endcolumn="29" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.proprietary.security.model" class="ApiKeyAuthenticationToken" method="ApiKeyAuthenticationToken" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="50" endline="50" begincolumn="23" endcolumn="26" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.proprietary.security.model" class="ApiKeyAuthenticationToken" method="eraseCredentials" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\proprietary\src\main\java\stirling\software\proprietary\security\service\DatabaseService.java">
+<violation beginline="219" endline="219" begincolumn="41" endcolumn="41" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.proprietary.security.service" class="DatabaseService" method="exportDatabase" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+</pmd>
