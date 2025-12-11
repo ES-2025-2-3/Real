@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.55.0" timestamp="2025-11-29T19:44:45.802">
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\UI\impl\DesktopBrowser.java">
+<violation beginline="276" endline="276" begincolumn="65" endcolumn="68" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.UI.impl" class="DesktopBrowser" method="onLoadingStateChange" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="323" endline="323" begincolumn="65" endcolumn="68" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.UI.impl" class="DesktopBrowser" method="onLoadingStateChange" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="443" endline="443" begincolumn="33" endcolumn="36" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.UI.impl" class="DesktopBrowser" method="forceInitializeUI" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="487" endline="487" begincolumn="33" endcolumn="36" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.UI.impl" class="DesktopBrowser" method="forceInitializeUI" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\UI\impl\LoadingWindow.java">
+<violation beginline="154" endline="157" begincolumn="48" endcolumn="55" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.SPDF.UI.impl" class="LoadingWindow" method="checkAndRefreshExplorer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+<violation beginline="163" endline="163" begincolumn="69" endcolumn="69" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.UI.impl" class="LoadingWindow" method="checkAndRefreshExplorer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="210" endline="215" begincolumn="72" endcolumn="79" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.SPDF.UI.impl" class="LoadingWindow" method="checkAndRefreshExplorer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+<violation beginline="221" endline="221" begincolumn="93" endcolumn="93" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.UI.impl" class="LoadingWindow" method="checkAndRefreshExplorer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="309" endline="309" begincolumn="54" endcolumn="55" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.UI.impl" class="LoadingWindow" method="setProgress" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\config\CleanUrlInterceptor.java">
+<violation beginline="56" endline="56" begincolumn="44" endcolumn="44" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.config" class="CleanUrlInterceptor" method="preHandle" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\config\EndpointInspector.java">
+<violation beginline="50" endline="50" begincolumn="35" endcolumn="47" rule="UnusedLocalVariable" ruleset="Best Practices" package="stirling.software.SPDF.config" class="EndpointInspector" method="discoverEndpoints" variable="handlerMethod" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'handlerMethod'.
+</violation>
+<violation beginline="94" endline="96" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Error Prone" package="stirling.software.SPDF.config" class="EndpointInspector" method="extractPatternsUsingDirectPaths" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="116" endline="118" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Error Prone" package="stirling.software.SPDF.config" class="EndpointInspector" method="extractPatternsFromString" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\config\EndpointInterceptor.java">
+<violation beginline="33" endline="33" begincolumn="17" endcolumn="25" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.config" class="EndpointInterceptor" method="preHandle" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\config\ExternalAppDepConfig.java">
+<violation beginline="277" endline="277" begincolumn="20" endcolumn="49" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.SPDF.config" class="ExternalAppDepConfig" method="readStream" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\config\InitialSetup.java">
+<violation beginline="95" endline="96" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Error Prone" package="stirling.software.SPDF.config" class="InitialSetup" method="initSetAppVersion" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\EditTableOfContentsController.java">
+<violation beginline="95" endline="95" begincolumn="31" endcolumn="36" rule="UnusedLocalVariable" ruleset="Best Practices" package="stirling.software.SPDF.controller.api" class="EditTableOfContentsController" method="extractBookmarkItems" variable="parent" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'parent'.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\RearrangePagesPDFController.java">
+<violation beginline="75" endline="75" begincolumn="27" endcolumn="27" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api" class="RearrangePagesPDFController" method="removeFirst" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="84" endline="84" begincolumn="27" endcolumn="27" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api" class="RearrangePagesPDFController" method="removeLast" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="93" endline="93" begincolumn="27" endcolumn="27" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api" class="RearrangePagesPDFController" method="removeFirstAndLast" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="191" endline="191" begincolumn="30" endcolumn="30" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api" class="RearrangePagesPDFController" method="duplicate" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\SplitPdfByChaptersController.java">
+<violation beginline="160" endline="160" begincolumn="26" endcolumn="37" rule="UnusedLocalVariable" ruleset="Best Practices" package="stirling.software.SPDF.controller.api" class="SplitPdfByChaptersController" method="splitPdf" variable="lastBookmark" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'lastBookmark'.
+</violation>
+<violation beginline="219" endline="219" begincolumn="48" endcolumn="50" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api" class="SplitPdfByChaptersController" method="mergeBookmarksThatCorrespondToSamePage" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\SplitPdfBySizeController.java">
+<violation beginline="88" endline="88" begincolumn="44" endcolumn="44" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api" class="SplitPdfBySizeController" method="autoSplitPdf" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="93" endline="93" begincolumn="44" endcolumn="44" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api" class="SplitPdfBySizeController" method="autoSplitPdf" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="160" endline="160" begincolumn="57" endcolumn="57" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api" class="SplitPdfBySizeController" method="handleSplitBySize" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\converters\ConvertImgPDFController.java">
+<violation beginline="131" endline="131" begincolumn="17" endcolumn="22" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertImgPDFController" method="convertToImage" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="133" endline="133" begincolumn="24" endcolumn="29" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertImgPDFController" method="convertToImage" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="188" endline="188" begincolumn="41" endcolumn="41" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertImgPDFController" method="convertToImage" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\converters\ConvertOfficeController.java">
+<violation beginline="84" endline="84" begincolumn="13" endcolumn="18" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertOfficeController" method="convertToPdf" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="84" endline="84" begincolumn="46" endcolumn="50" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertOfficeController" method="convertToPdf" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="158" endline="158" begincolumn="43" endcolumn="44" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertOfficeController" method="convertToPdf" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\converters\ConvertPDFToPDFA.java">
+<violation beginline="209" endline="209" begincolumn="25" endcolumn="25" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertPDFToPDFA" method="processWithPDFBox" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="405" endline="405" begincolumn="29" endcolumn="29" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertPDFToPDFA" method="sanitizePdfA" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="452" endline="452" begincolumn="25" endcolumn="25" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertPDFToPDFA" method="removeElementsForPdfA" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="458" endline="458" begincolumn="29" endcolumn="29" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertPDFToPDFA" method="removeElementsForPdfA" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="628" endline="628" begincolumn="25" endcolumn="35" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertPDFToPDFA" method="preProcessHighlights" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\converters\ConvertPdfToVideoController.java">
+<violation beginline="115" endline="115" begincolumn="19" endcolumn="20" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertPdfToVideoController" method="convertPdfToVideo" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="159" endline="159" begincolumn="35" endcolumn="40" rule="UnusedLocalVariable" ruleset="Best Practices" package="stirling.software.SPDF.controller.api.converters" class="ConvertPdfToVideoController" method="convertPdfToVideo" variable="result" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'result'.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\converters\ConvertWebsiteToPDF.java">
+<violation beginline="288" endline="288" begincolumn="33" endcolumn="34" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ConvertWebsiteToPDF" method="convertURLToFileName" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\converters\ExtractCSVController.java">
+<violation beginline="86" endline="86" begincolumn="45" endcolumn="45" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.converters" class="ExtractCSVController" method="pdfToCsv" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\AutoRenameController.java">
+<violation beginline="118" endline="118" begincolumn="51" endcolumn="54" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="AutoRenameController" method="getText" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="121" endline="121" begincolumn="43" endcolumn="46" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="AutoRenameController" method="getText" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\CompressController.java">
+<violation beginline="769" endline="769" begincolumn="65" endcolumn="68" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController$ImageIdentity" method="ImageIdentity" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="901" endline="901" begincolumn="34" endcolumn="36" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="determineOptimizeLevel" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="902" endline="902" begincolumn="34" endcolumn="36" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="determineOptimizeLevel" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="903" endline="903" begincolumn="34" endcolumn="36" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="determineOptimizeLevel" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="904" endline="904" begincolumn="34" endcolumn="36" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="determineOptimizeLevel" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="905" endline="905" begincolumn="34" endcolumn="36" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="determineOptimizeLevel" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="906" endline="906" begincolumn="34" endcolumn="36" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="determineOptimizeLevel" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="907" endline="907" begincolumn="34" endcolumn="37" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="determineOptimizeLevel" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="908" endline="908" begincolumn="34" endcolumn="36" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="determineOptimizeLevel" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="917" endline="917" begincolumn="28" endcolumn="30" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="incrementOptimizeLevel" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="919" endline="919" begincolumn="35" endcolumn="37" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="incrementOptimizeLevel" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="970" endline="970" begincolumn="21" endcolumn="46" rule="UnusedLocalVariable" ruleset="Best Practices" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="optimizePdf" variable="externalCompressionApplied" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'externalCompressionApplied'.
+</violation>
+<violation beginline="1136" endline="1136" begincolumn="42" endcolumn="42" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="applyGhostscriptCompression" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="1247" endline="1247" begincolumn="34" endcolumn="34" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="applyQpdfCompression" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="1252" endline="1252" begincolumn="34" endcolumn="34" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="applyQpdfCompression" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="1272" endline="1272" begincolumn="38" endcolumn="38" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="CompressController" method="applyQpdfCompression" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\ExtractImageScansController.java">
+<violation beginline="159" endline="159" begincolumn="39" endcolumn="48" rule="UnusedLocalVariable" ruleset="Best Practices" package="stirling.software.SPDF.controller.api.misc" class="ExtractImageScansController" method="extractImageScans" variable="returnCode" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'returnCode'.
+</violation>
+<violation beginline="177" endline="177" begincolumn="46" endcolumn="46" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="ExtractImageScansController" method="extractImageScans" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\ExtractImagesController.java">
+<violation beginline="134" endline="134" begincolumn="52" endcolumn="52" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="ExtractImagesController" method="extractImages" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="244" endline="244" begincolumn="20" endcolumn="25" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="ExtractImagesController" method="convertToRGB" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="244" endline="244" begincolumn="55" endcolumn="59" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="ExtractImagesController" method="convertToRGB" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\MetadataController.java">
+<violation beginline="114" endline="114" begincolumn="22" endcolumn="25" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="MetadataController" method="metadata" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="115" endline="115" begincolumn="28" endcolumn="31" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="MetadataController" method="metadata" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="116" endline="116" begincolumn="23" endcolumn="26" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="MetadataController" method="metadata" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="117" endline="117" begincolumn="24" endcolumn="27" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="MetadataController" method="metadata" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="118" endline="118" begincolumn="32" endcolumn="35" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="MetadataController" method="metadata" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="119" endline="119" begincolumn="24" endcolumn="27" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="MetadataController" method="metadata" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="120" endline="120" begincolumn="23" endcolumn="26" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="MetadataController" method="metadata" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="121" endline="121" begincolumn="21" endcolumn="24" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="MetadataController" method="metadata" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="122" endline="122" begincolumn="23" endcolumn="26" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="MetadataController" method="metadata" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\OCRController.java">
+<violation beginline="121" endline="121" begincolumn="94" endcolumn="97" rule="NullAssignment" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="OCRController" method="processPdfWithOCR" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\PageNumbersController.java">
+<violation beginline="88" endline="88" begincolumn="22" endcolumn="33" rule="UnusedLocalVariable" ruleset="Best Practices" package="stirling.software.SPDF.controller.api.misc" class="PageNumbersController" method="addPageNumbers" variable="baseFilename" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'baseFilename'.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\RepairController.java">
+<violation beginline="103" endline="103" begincolumn="39" endcolumn="48" rule="UnusedLocalVariable" ruleset="Best Practices" package="stirling.software.SPDF.controller.api.misc" class="RepairController" method="repairPdf" variable="qpdfResult" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'qpdfResult'.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\ScannerEffectController.java">
+<violation beginline="717" endline="719" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="ScannerEffectController" method="scannerEffect" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="761" endline="763" begincolumn="15" endcolumn="13" rule="EmptyCatchBlock" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="ScannerEffectController$RenderingResources" method="closeQuietly" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\StampController.java">
+<violation beginline="260" endline="260" begincolumn="16" endcolumn="33" rule="UnusedLocalVariable" ruleset="Best Practices" package="stirling.software.SPDF.controller.api.misc" class="StampController" method="addTextStamp" variable="processedStampText" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'processedStampText'.
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\misc\UnlockPDFFormsController.java">
+<violation beginline="62" endline="62" begincolumn="47" endcolumn="47" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.misc" class="UnlockPDFFormsController" method="unlockPDFForms" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\pipeline\PipelineProcessor.java">
+<violation beginline="124" endline="124" begincolumn="29" endcolumn="33" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.pipeline" class="PipelineProcessor" method="runPipelineAgainstFiles" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="414" endline="414" begincolumn="20" endcolumn="55" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.pipeline" class="PipelineProcessor" method="unzip" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+<violation beginline="418" endline="418" begincolumn="24" endcolumn="55" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.pipeline" class="PipelineProcessor" method="unzip" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\security\GetInfoOnPDF.java">
+<violation beginline="226" endline="226" begincolumn="37" endcolumn="65" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="GetInfoOnPDF" method="validatePdfAWithPreflight" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\security\PasswordController.java">
+<violation beginline="103" endline="103" begincolumn="13" endcolumn="14" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="PasswordController" method="addPassword" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="103" endline="103" begincolumn="41" endcolumn="42" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="PasswordController" method="addPassword" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\api\security\RedactController.java">
+<violation beginline="437" endline="438" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="RedactController" method="createAlternativePlaceholder" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="820" endline="820" begincolumn="16" endcolumn="56" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="RedactController" method="createTokensWithoutTargetText" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+<violation beginline="897" endline="897" begincolumn="21" endcolumn="24" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="RedactController" method="extractTextSegments" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="984" endline="984" begincolumn="21" endcolumn="24" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="RedactController" method="applyRedactionsToTokens" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="984" endline="984" begincolumn="58" endcolumn="60" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="RedactController" method="applyRedactionsToTokens" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="1325" endline="1325" begincolumn="24" endcolumn="27" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="RedactController" method="modifyTokenForRedaction" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="1595" endline="1595" begincolumn="20" endcolumn="60" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="RedactController" method="processFormXObject" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+<violation beginline="1629" endline="1629" begincolumn="21" endcolumn="24" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.api.security" class="RedactController" method="extractTextSegmentsFromXObject" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\web\MetricsController.java">
+<violation beginline="217" endline="217" begincolumn="33" endcolumn="38" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.web" class="MetricsController" method="getRequestCount" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="228" endline="228" begincolumn="33" endcolumn="37" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.web" class="MetricsController" method="getRequestCount" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="258" endline="258" begincolumn="33" endcolumn="38" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.web" class="MetricsController" method="getEndpointCounts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="269" endline="269" begincolumn="33" endcolumn="37" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.web" class="MetricsController" method="getEndpointCounts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="298" endline="298" begincolumn="33" endcolumn="38" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.web" class="MetricsController" method="getUniqueUserCount" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="309" endline="309" begincolumn="33" endcolumn="37" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.web" class="MetricsController" method="getUniqueUserCount" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\controller\web\UploadLimitService.java">
+<violation beginline="31" endline="31" begincolumn="30" endcolumn="30" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.web" class="UploadLimitService" method="getUploadLimit" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="38" endline="38" begincolumn="32" endcolumn="32" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.web" class="UploadLimitService" method="getUploadLimit" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="65" endline="65" begincolumn="21" endcolumn="24" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.controller.web" class="UploadLimitService" method="humanReadableByteCount" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\pdf\TextFinder.java">
+<violation beginline="82" endline="82" begincolumn="56" endcolumn="56" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.pdf" class="TextFinder" method="endPage" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\service\AttachmentService.java">
+<violation beginline="237" endline="237" begincolumn="20" endcolumn="57" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.SPDF.service" class="AttachmentService" method="readAttachmentData" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\service\CertificateValidationService.java">
+<violation beginline="34" endline="34" begincolumn="20" endcolumn="81" rule="AssignmentInOperand" ruleset="Error Prone" package="stirling.software.SPDF.service" class="CertificateValidationService" method="loadMozillaCertificates" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\service\MetricsAggregatorService.java">
+<violation beginline="47" endline="47" begincolumn="49" endcolumn="49" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.service" class="MetricsAggregatorService" method="aggregateAndSendMetrics" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="57" endline="57" begincolumn="33" endcolumn="38" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.service" class="MetricsAggregatorService" method="aggregateAndSendMetrics" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="65" endline="65" begincolumn="33" endcolumn="37" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.service" class="MetricsAggregatorService" method="aggregateAndSendMetrics" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\utils\text\TextEncodingHelper.java">
+<violation beginline="225" endline="225" begincolumn="29" endcolumn="30" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.utils.text" class="TextEncodingHelper" method="isSimpleCharacter" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="346" endline="347" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Error Prone" package="stirling.software.SPDF.utils.text" class="TextEncodingHelper" method="canCalculateBasicWidths" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="C:\Users\pedro\OneDrive\Área de Trabalho\ProjectClone\Stirling-PDF\app\core\src\main\java\stirling\software\SPDF\utils\text\TextFinderUtils.java">
+<violation beginline="92" endline="92" begincolumn="45" endcolumn="45" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="stirling.software.SPDF.utils.text" class="TextFinderUtils" method="applyWordBoundaries" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+</pmd>

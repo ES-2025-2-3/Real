@@ -1,0 +1,1967 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+		</style>
+   </head>
+   <body>
+      <h1>SpotBugs Report</h1>
+      <p>Produced using <a href="https://spotbugs.github.io">SpotBugs</a>4.8.6.</p>
+      <p>Project: 
+			Stirling PDF[Stirling_PDF.proprietary.main]</p>
+      <h2>Metrics</h2>
+      <p>6184 lines of code analyzed,
+	in 126 classes, 
+	in 33 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right">6</td>
+            <td align="right">0.97</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">112</td>
+            <td align="right">18.11</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>118</b>
+            </td>
+            <td align="right">
+               <b>19.08</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Summary</h2>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </td>
+            <td align="right">3</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+            </td>
+            <td align="right">4</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_I18N">Internationalization Warnings</a>
+            </td>
+            <td align="right">5</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+            </td>
+            <td align="right">98</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_MT_CORRECTNESS">Multithreaded correctness Warnings</a>
+            </td>
+            <td align="right">1</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </td>
+            <td align="right">7</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>118</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h1>Warnings</h1>
+      <p>Click on each warning link to see a full description of the issue, and
+	    details of how to resolve it.</p>
+      <h2>
+         <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#CT_CONSTRUCTOR_THROW">Be wary of letting constructors throw exceptions.</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Exception thrown in class stirling.software.proprietary.security.model.ApiKeyAuthenticationToken at new stirling.software.proprietary.security.model.ApiKeyAuthenticationToken(String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.<br/>
+                  <br/>
+                  <br/>In file ApiKeyAuthenticationToken.java ApiKeyAuthenticationToken.java ApiKeyAuthenticationToken.java,
+					
+						line 17 17 17<br/>In class stirling.software.proprietary.security.model.ApiKeyAuthenticationToken<br/>In method new stirling.software.proprietary.security.model.ApiKeyAuthenticationToken(String)<br/>At ApiKeyAuthenticationToken.java:[line 17]<br/>At ApiKeyAuthenticationToken.java:[line 17]<br/>At ApiKeyAuthenticationToken.java:[line 17]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#DM_EXIT">Method invokes System.exit(...)</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.InitialSecuritySetup.init() invokes System.exit(...), which shuts down the entire virtual machine<br/>
+                  <br/>
+                  <br/>In file InitialSecuritySetup.java InitialSecuritySetup.java,
+					
+						line 55 55<br/>In class stirling.software.proprietary.security.InitialSecuritySetup<br/>In method stirling.software.proprietary.security.InitialSecuritySetup.init()<br/>At InitialSecuritySetup.java:[line 55]<br/>At InitialSecuritySetup.java:[line 55]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">Method ignores exceptional return value</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Exceptional return value of java.io.File.setWritable(boolean, boolean) ignored in stirling.software.proprietary.security.service.KeyPersistenceService.storePrivateKey(String, PrivateKey)<br/>
+                  <br/>
+                  <br/>In file KeyPersistenceService.java KeyPersistenceService.java,
+					
+						line 233 233<br/>In class stirling.software.proprietary.security.service.KeyPersistenceService<br/>In method stirling.software.proprietary.security.service.KeyPersistenceService.storePrivateKey(String, PrivateKey)<br/>Called method java.io.File.setWritable(boolean, boolean)<br/>At KeyPersistenceService.java:[line 233]<br/>At KeyPersistenceService.java:[line 233]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#NP_OPTIONAL_RETURN_NULL">Method with Optional return type returns explicit null</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.service.UserService.loadUserByApiKey(String) has Optional return type and returns explicit null<br/>
+                  <br/>
+                  <br/>In file UserService.java UserService.java,
+					
+						line 147 147<br/>In class stirling.software.proprietary.security.service.UserService<br/>In method stirling.software.proprietary.security.service.UserService.loadUserByApiKey(String)<br/>At UserService.java:[line 147]<br/>At UserService.java:[line 147]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#NP_NULL_ON_SOME_PATH_EXCEPTION">Possible null pointer dereference in method on exception path</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Possible null pointer dereference of keyPairGenerator in stirling.software.proprietary.security.service.KeyPersistenceService.generateRSAKeypair() on exception path<br/>
+                  <br/>
+                  <br/>In file KeyPersistenceService.java KeyPersistenceService.java KeyPersistenceService.java KeyPersistenceService.java,
+					
+						line 214 205 210 211<br/>In class stirling.software.proprietary.security.service.KeyPersistenceService<br/>In method stirling.software.proprietary.security.service.KeyPersistenceService.generateRSAKeypair()<br/>Value loaded from keyPairGenerator<br/>Dereferenced at KeyPersistenceService.java:[line 214]<br/>Null value at KeyPersistenceService.java:[line 205]<br/>Known null at KeyPersistenceService.java:[line 210]<br/>Known null at KeyPersistenceService.java:[line 211]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">Nullcheck of value previously dereferenced</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Nullcheck of usersWithoutTeam at line 79 of value previously dereferenced in stirling.software.proprietary.security.InitialSecuritySetup.assignUsersToDefaultTeamIfMissing()<br/>
+                  <br/>
+                  <br/>In file InitialSecuritySetup.java InitialSecuritySetup.java InitialSecuritySetup.java,
+					
+						line 79 88 88<br/>In class stirling.software.proprietary.security.InitialSecuritySetup<br/>In method stirling.software.proprietary.security.InitialSecuritySetup.assignUsersToDefaultTeamIfMissing()<br/>Value loaded from usersWithoutTeam<br/>Return value of stirling.software.proprietary.security.service.UserService.getUsersWithoutTeam() of type java.util.List<br/>At InitialSecuritySetup.java:[line 79]<br/>Redundant null check at InitialSecuritySetup.java:[line 88]<br/>Redundant null check at InitialSecuritySetup.java:[line 88]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">Nullcheck of value previously dereferenced</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Nullcheck of newUsername at line 118 of value previously dereferenced in stirling.software.proprietary.security.controller.api.UserController.changeUsername(Principal, String, String, HttpServletRequest, HttpServletResponse, RedirectAttributes)<br/>
+                  <br/>
+                  <br/>In file UserController.java UserController.java UserController.java,
+					
+						line 97 118 118<br/>In class stirling.software.proprietary.security.controller.api.UserController<br/>In method stirling.software.proprietary.security.controller.api.UserController.changeUsername(Principal, String, String, HttpServletRequest, HttpServletResponse, RedirectAttributes)<br/>Value loaded from newUsername<br/>At UserController.java:[line 97]<br/>Redundant null check at UserController.java:[line 118]<br/>Redundant null check at UserController.java:[line 118]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_I18N">Internationalization Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Found reliance on default encoding in stirling.software.proprietary.controller.api.AuditDashboardController.exportAuditData(AuditExportRequest): String.getBytes()<br/>
+                  <br/>
+                  <br/>In file AuditDashboardController.java AuditDashboardController.java,
+					
+						line 242 242<br/>In class stirling.software.proprietary.controller.api.AuditDashboardController<br/>In method stirling.software.proprietary.controller.api.AuditDashboardController.exportAuditData(AuditExportRequest)<br/>Called method String.getBytes()<br/>At AuditDashboardController.java:[line 242]<br/>At AuditDashboardController.java:[line 242]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Found reliance on default encoding in stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier.verifyCertificateLicense(String, KeygenLicenseVerifier$LicenseContext): new String(byte[])<br/>
+                  <br/>
+                  <br/>In file KeygenLicenseVerifier.java KeygenLicenseVerifier.java,
+					
+						line 129 129<br/>In class stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier<br/>In method stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier.verifyCertificateLicense(String, KeygenLicenseVerifier$LicenseContext)<br/>Called method new String(byte[])<br/>At KeygenLicenseVerifier.java:[line 129]<br/>At KeygenLicenseVerifier.java:[line 129]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Found reliance on default encoding in stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier.verifyEd25519Signature(String, String): String.getBytes()<br/>
+                  <br/>
+                  <br/>In file KeygenLicenseVerifier.java KeygenLicenseVerifier.java,
+					
+						line 190 190<br/>In class stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier<br/>In method stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier.verifyEd25519Signature(String, String)<br/>Called method String.getBytes()<br/>At KeygenLicenseVerifier.java:[line 190]<br/>At KeygenLicenseVerifier.java:[line 190]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Found reliance on default encoding in stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier.verifyJWTLicense(String, KeygenLicenseVerifier$LicenseContext): new String(byte[])<br/>
+                  <br/>
+                  <br/>In file KeygenLicenseVerifier.java KeygenLicenseVerifier.java,
+					
+						line 319 319<br/>In class stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier<br/>In method stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier.verifyJWTLicense(String, KeygenLicenseVerifier$LicenseContext)<br/>Called method new String(byte[])<br/>At KeygenLicenseVerifier.java:[line 319]<br/>At KeygenLicenseVerifier.java:[line 319]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Found reliance on default encoding in stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier.verifyJWTSignature(String, String): String.getBytes()<br/>
+                  <br/>
+                  <br/>In file KeygenLicenseVerifier.java KeygenLicenseVerifier.java,
+					
+						line 340 340<br/>In class stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier<br/>In method stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier.verifyJWTSignature(String, String)<br/>Called method String.getBytes()<br/>At KeygenLicenseVerifier.java:[line 340]<br/>At KeygenLicenseVerifier.java:[line 340]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.model.Team.getUsers() may expose internal representation by returning Team.users<br/>
+                  <br/>
+                  <br/>In file Team.java Team.java,
+					
+						line 33 33<br/>In class stirling.software.proprietary.model.Team<br/>In method stirling.software.proprietary.model.Team.getUsers()<br/>Field stirling.software.proprietary.model.Team.users<br/>At Team.java:[line 33]<br/>At Team.java:[line 33]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.model.api.audit.AuditDataResponse.getContent() may expose internal representation by returning AuditDataResponse.content<br/>
+                  <br/>
+                  <br/>In file AuditDataResponse.java AuditDataResponse.java,
+					
+						line 24 24<br/>In class stirling.software.proprietary.model.api.audit.AuditDataResponse<br/>In method stirling.software.proprietary.model.api.audit.AuditDataResponse.getContent()<br/>Field stirling.software.proprietary.model.api.audit.AuditDataResponse.content<br/>At AuditDataResponse.java:[line 24]<br/>At AuditDataResponse.java:[line 24]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.model.api.audit.AuditStatsResponse.getEventsByDay() may expose internal representation by returning AuditStatsResponse.eventsByDay<br/>
+                  <br/>
+                  <br/>In file AuditStatsResponse.java AuditStatsResponse.java,
+					
+						line 29 29<br/>In class stirling.software.proprietary.model.api.audit.AuditStatsResponse<br/>In method stirling.software.proprietary.model.api.audit.AuditStatsResponse.getEventsByDay()<br/>Field stirling.software.proprietary.model.api.audit.AuditStatsResponse.eventsByDay<br/>At AuditStatsResponse.java:[line 29]<br/>At AuditStatsResponse.java:[line 29]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.model.api.audit.AuditStatsResponse.getEventsByPrincipal() may expose internal representation by returning AuditStatsResponse.eventsByPrincipal<br/>
+                  <br/>
+                  <br/>In file AuditStatsResponse.java AuditStatsResponse.java,
+					
+						line 26 26<br/>In class stirling.software.proprietary.model.api.audit.AuditStatsResponse<br/>In method stirling.software.proprietary.model.api.audit.AuditStatsResponse.getEventsByPrincipal()<br/>Field stirling.software.proprietary.model.api.audit.AuditStatsResponse.eventsByPrincipal<br/>At AuditStatsResponse.java:[line 26]<br/>At AuditStatsResponse.java:[line 26]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.model.api.audit.AuditStatsResponse.getEventsByType() may expose internal representation by returning AuditStatsResponse.eventsByType<br/>
+                  <br/>
+                  <br/>In file AuditStatsResponse.java AuditStatsResponse.java,
+					
+						line 23 23<br/>In class stirling.software.proprietary.model.api.audit.AuditStatsResponse<br/>In method stirling.software.proprietary.model.api.audit.AuditStatsResponse.getEventsByType()<br/>Field stirling.software.proprietary.model.api.audit.AuditStatsResponse.eventsByType<br/>At AuditStatsResponse.java:[line 23]<br/>At AuditStatsResponse.java:[line 23]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.configuration.DatabaseConfig.getDatasource() may expose internal representation by returning DatabaseConfig.datasource<br/>
+                  <br/>
+                  <br/>In file DatabaseConfig.java DatabaseConfig.java,
+					
+						line 40 40<br/>In class stirling.software.proprietary.security.configuration.DatabaseConfig<br/>In method stirling.software.proprietary.security.configuration.DatabaseConfig.getDatasource()<br/>Field stirling.software.proprietary.security.configuration.DatabaseConfig.datasource<br/>At DatabaseConfig.java:[line 40]<br/>At DatabaseConfig.java:[line 40]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.model.Authority.getUser() may expose internal representation by returning Authority.user<br/>
+                  <br/>
+                  <br/>In file Authority.java Authority.java,
+					
+						line 36 36<br/>In class stirling.software.proprietary.security.model.Authority<br/>In method stirling.software.proprietary.security.model.Authority.getUser()<br/>Field stirling.software.proprietary.security.model.Authority.user<br/>At Authority.java:[line 36]<br/>At Authority.java:[line 36]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.model.User.getAuthorities() may expose internal representation by returning User.authorities<br/>
+                  <br/>
+                  <br/>In file User.java User.java,
+					
+						line 62 62<br/>In class stirling.software.proprietary.security.model.User<br/>In method stirling.software.proprietary.security.model.User.getAuthorities()<br/>Field stirling.software.proprietary.security.model.User.authorities<br/>At User.java:[line 62]<br/>At User.java:[line 62]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.model.User.getSettings() may expose internal representation by returning User.settings<br/>
+                  <br/>
+                  <br/>In file User.java User.java,
+					
+						line 73 73<br/>In class stirling.software.proprietary.security.model.User<br/>In method stirling.software.proprietary.security.model.User.getSettings()<br/>Field stirling.software.proprietary.security.model.User.settings<br/>At User.java:[line 73]<br/>At User.java:[line 73]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.model.User.getTeam() may expose internal representation by returning User.team<br/>
+                  <br/>
+                  <br/>In file User.java User.java,
+					
+						line 66 66<br/>In class stirling.software.proprietary.security.model.User<br/>In method stirling.software.proprietary.security.model.User.getTeam()<br/>Field stirling.software.proprietary.security.model.User.team<br/>At User.java:[line 66]<br/>At User.java:[line 66]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.model.api.admin.UpdateSettingsRequest.getSettings() may expose internal representation by returning UpdateSettingsRequest.settings<br/>
+                  <br/>
+                  <br/>In file UpdateSettingsRequest.java UpdateSettingsRequest.java,
+					
+						line 22 22<br/>In class stirling.software.proprietary.security.model.api.admin.UpdateSettingsRequest<br/>In method stirling.software.proprietary.security.model.api.admin.UpdateSettingsRequest.getSettings()<br/>Field stirling.software.proprietary.security.model.api.admin.UpdateSettingsRequest.settings<br/>At UpdateSettingsRequest.java:[line 22]<br/>At UpdateSettingsRequest.java:[line 22]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.attributes() may expose internal representation by returning CustomSaml2AuthenticatedPrincipal.attributes<br/>
+                  <br/>
+                  <br/>In file CustomSaml2AuthenticatedPrincipal.java CustomSaml2AuthenticatedPrincipal.java,
+					
+						line 10 10<br/>In class stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal<br/>In method stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.attributes()<br/>Field stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.attributes<br/>At CustomSaml2AuthenticatedPrincipal.java:[line 10]<br/>At CustomSaml2AuthenticatedPrincipal.java:[line 10]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.getAttributes() may expose internal representation by returning CustomSaml2AuthenticatedPrincipal.attributes<br/>
+                  <br/>
+                  <br/>In file CustomSaml2AuthenticatedPrincipal.java CustomSaml2AuthenticatedPrincipal.java,
+					
+						line 25 25<br/>In class stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal<br/>In method stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.getAttributes()<br/>Field stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.attributes<br/>At CustomSaml2AuthenticatedPrincipal.java:[line 25]<br/>At CustomSaml2AuthenticatedPrincipal.java:[line 25]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.sessionIndexes() may expose internal representation by returning CustomSaml2AuthenticatedPrincipal.sessionIndexes<br/>
+                  <br/>
+                  <br/>In file CustomSaml2AuthenticatedPrincipal.java CustomSaml2AuthenticatedPrincipal.java,
+					
+						line 10 10<br/>In class stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal<br/>In method stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.sessionIndexes()<br/>Field stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.sessionIndexes<br/>At CustomSaml2AuthenticatedPrincipal.java:[line 10]<br/>At CustomSaml2AuthenticatedPrincipal.java:[line 10]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.service.KeyPersistenceService.getActiveKey() may expose internal representation by returning KeyPersistenceService.activeKey<br/>
+                  <br/>
+                  <br/>In file KeyPersistenceService.java KeyPersistenceService.java,
+					
+						line 130 130<br/>In class stirling.software.proprietary.security.service.KeyPersistenceService<br/>In method stirling.software.proprietary.security.service.KeyPersistenceService.getActiveKey()<br/>Field stirling.software.proprietary.security.service.KeyPersistenceService.activeKey<br/>At KeyPersistenceService.java:[line 130]<br/>At KeyPersistenceService.java:[line 130]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.config.CustomAuditEventRepository(PersistentAuditEventRepository, ObjectMapper) may expose internal representation by storing an externally mutable object into CustomAuditEventRepository.repo<br/>
+                  <br/>
+                  <br/>In file CustomAuditEventRepository.java CustomAuditEventRepository.java,
+					
+						line 26 26<br/>In class stirling.software.proprietary.config.CustomAuditEventRepository<br/>In method new stirling.software.proprietary.config.CustomAuditEventRepository(PersistentAuditEventRepository, ObjectMapper)<br/>Field stirling.software.proprietary.config.CustomAuditEventRepository.repo<br/>Local variable named repo<br/>At CustomAuditEventRepository.java:[line 26]<br/>At CustomAuditEventRepository.java:[line 26]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.controller.api.AdminJobController(TaskManager, JobQueue) may expose internal representation by storing an externally mutable object into AdminJobController.taskManager<br/>
+                  <br/>
+                  <br/>In file AdminJobController.java AdminJobController.java,
+					
+						line 27 27<br/>In class stirling.software.proprietary.controller.api.AdminJobController<br/>In method new stirling.software.proprietary.controller.api.AdminJobController(TaskManager, JobQueue)<br/>Field stirling.software.proprietary.controller.api.AdminJobController.taskManager<br/>Local variable named taskManager<br/>At AdminJobController.java:[line 27]<br/>At AdminJobController.java:[line 27]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.controller.api.AuditDashboardController(PersistentAuditEventRepository, ObjectMapper) may expose internal representation by storing an externally mutable object into AuditDashboardController.auditRepository<br/>
+                  <br/>
+                  <br/>In file AuditDashboardController.java AuditDashboardController.java,
+					
+						line 55 55<br/>In class stirling.software.proprietary.controller.api.AuditDashboardController<br/>In method new stirling.software.proprietary.controller.api.AuditDashboardController(PersistentAuditEventRepository, ObjectMapper)<br/>Field stirling.software.proprietary.controller.api.AuditDashboardController.auditRepository<br/>Local variable named auditRepository<br/>At AuditDashboardController.java:[line 55]<br/>At AuditDashboardController.java:[line 55]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.model.Team.setUsers(Set) may expose internal representation by storing an externally mutable object into Team.users<br/>
+                  <br/>
+                  <br/>In file Team.java Team.java,
+					
+						line 17 17<br/>In class stirling.software.proprietary.model.Team<br/>In method stirling.software.proprietary.model.Team.setUsers(Set)<br/>Field stirling.software.proprietary.model.Team.users<br/>Local variable named users<br/>At Team.java:[line 17]<br/>At Team.java:[line 17]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.model.api.audit.AuditDataResponse(List, int, long, int) may expose internal representation by storing an externally mutable object into AuditDataResponse.content<br/>
+                  <br/>
+                  <br/>In file AuditDataResponse.java AuditDataResponse.java,
+					
+						line 19 19<br/>In class stirling.software.proprietary.model.api.audit.AuditDataResponse<br/>In method new stirling.software.proprietary.model.api.audit.AuditDataResponse(List, int, long, int)<br/>Field stirling.software.proprietary.model.api.audit.AuditDataResponse.content<br/>Local variable named content<br/>At AuditDataResponse.java:[line 19]<br/>At AuditDataResponse.java:[line 19]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.model.api.audit.AuditDataResponse.setContent(List) may expose internal representation by storing an externally mutable object into AuditDataResponse.content<br/>
+                  <br/>
+                  <br/>In file AuditDataResponse.java AuditDataResponse.java,
+					
+						line 16 16<br/>In class stirling.software.proprietary.model.api.audit.AuditDataResponse<br/>In method stirling.software.proprietary.model.api.audit.AuditDataResponse.setContent(List)<br/>Field stirling.software.proprietary.model.api.audit.AuditDataResponse.content<br/>Local variable named content<br/>At AuditDataResponse.java:[line 16]<br/>At AuditDataResponse.java:[line 16]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.model.api.audit.AuditStatsResponse(Map, Map, Map, int) may expose internal representation by storing an externally mutable object into AuditStatsResponse.eventsByDay<br/>
+                  <br/>
+                  <br/>In file AuditStatsResponse.java AuditStatsResponse.java,
+					
+						line 18 18<br/>In class stirling.software.proprietary.model.api.audit.AuditStatsResponse<br/>In method new stirling.software.proprietary.model.api.audit.AuditStatsResponse(Map, Map, Map, int)<br/>Field stirling.software.proprietary.model.api.audit.AuditStatsResponse.eventsByDay<br/>Local variable named eventsByDay<br/>At AuditStatsResponse.java:[line 18]<br/>At AuditStatsResponse.java:[line 18]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.model.api.audit.AuditStatsResponse(Map, Map, Map, int) may expose internal representation by storing an externally mutable object into AuditStatsResponse.eventsByPrincipal<br/>
+                  <br/>
+                  <br/>In file AuditStatsResponse.java AuditStatsResponse.java,
+					
+						line 18 18<br/>In class stirling.software.proprietary.model.api.audit.AuditStatsResponse<br/>In method new stirling.software.proprietary.model.api.audit.AuditStatsResponse(Map, Map, Map, int)<br/>Field stirling.software.proprietary.model.api.audit.AuditStatsResponse.eventsByPrincipal<br/>Local variable named eventsByPrincipal<br/>At AuditStatsResponse.java:[line 18]<br/>At AuditStatsResponse.java:[line 18]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.model.api.audit.AuditStatsResponse(Map, Map, Map, int) may expose internal representation by storing an externally mutable object into AuditStatsResponse.eventsByType<br/>
+                  <br/>
+                  <br/>In file AuditStatsResponse.java AuditStatsResponse.java,
+					
+						line 18 18<br/>In class stirling.software.proprietary.model.api.audit.AuditStatsResponse<br/>In method new stirling.software.proprietary.model.api.audit.AuditStatsResponse(Map, Map, Map, int)<br/>Field stirling.software.proprietary.model.api.audit.AuditStatsResponse.eventsByType<br/>Local variable named eventsByType<br/>At AuditStatsResponse.java:[line 18]<br/>At AuditStatsResponse.java:[line 18]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.model.api.audit.AuditStatsResponse.setEventsByDay(Map) may expose internal representation by storing an externally mutable object into AuditStatsResponse.eventsByDay<br/>
+                  <br/>
+                  <br/>In file AuditStatsResponse.java AuditStatsResponse.java,
+					
+						line 15 15<br/>In class stirling.software.proprietary.model.api.audit.AuditStatsResponse<br/>In method stirling.software.proprietary.model.api.audit.AuditStatsResponse.setEventsByDay(Map)<br/>Field stirling.software.proprietary.model.api.audit.AuditStatsResponse.eventsByDay<br/>Local variable named eventsByDay<br/>At AuditStatsResponse.java:[line 15]<br/>At AuditStatsResponse.java:[line 15]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.model.api.audit.AuditStatsResponse.setEventsByPrincipal(Map) may expose internal representation by storing an externally mutable object into AuditStatsResponse.eventsByPrincipal<br/>
+                  <br/>
+                  <br/>In file AuditStatsResponse.java AuditStatsResponse.java,
+					
+						line 15 15<br/>In class stirling.software.proprietary.model.api.audit.AuditStatsResponse<br/>In method stirling.software.proprietary.model.api.audit.AuditStatsResponse.setEventsByPrincipal(Map)<br/>Field stirling.software.proprietary.model.api.audit.AuditStatsResponse.eventsByPrincipal<br/>Local variable named eventsByPrincipal<br/>At AuditStatsResponse.java:[line 15]<br/>At AuditStatsResponse.java:[line 15]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.model.api.audit.AuditStatsResponse.setEventsByType(Map) may expose internal representation by storing an externally mutable object into AuditStatsResponse.eventsByType<br/>
+                  <br/>
+                  <br/>In file AuditStatsResponse.java AuditStatsResponse.java,
+					
+						line 15 15<br/>In class stirling.software.proprietary.model.api.audit.AuditStatsResponse<br/>In method stirling.software.proprietary.model.api.audit.AuditStatsResponse.setEventsByType(Map)<br/>Field stirling.software.proprietary.model.api.audit.AuditStatsResponse.eventsByType<br/>Local variable named eventsByType<br/>At AuditStatsResponse.java:[line 15]<br/>At AuditStatsResponse.java:[line 15]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.CustomAuthenticationFailureHandler(LoginAttemptService, UserService) may expose internal representation by storing an externally mutable object into CustomAuthenticationFailureHandler.userService<br/>
+                  <br/>
+                  <br/>In file CustomAuthenticationFailureHandler.java CustomAuthenticationFailureHandler.java,
+					
+						line 37 37<br/>In class stirling.software.proprietary.security.CustomAuthenticationFailureHandler<br/>In method new stirling.software.proprietary.security.CustomAuthenticationFailureHandler(LoginAttemptService, UserService)<br/>Field stirling.software.proprietary.security.CustomAuthenticationFailureHandler.userService<br/>Local variable named userService<br/>At CustomAuthenticationFailureHandler.java:[line 37]<br/>At CustomAuthenticationFailureHandler.java:[line 37]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.CustomAuthenticationSuccessHandler(LoginAttemptService, UserService, JwtServiceInterface) may expose internal representation by storing an externally mutable object into CustomAuthenticationSuccessHandler.jwtService<br/>
+                  <br/>
+                  <br/>In file CustomAuthenticationSuccessHandler.java CustomAuthenticationSuccessHandler.java,
+					
+						line 40 40<br/>In class stirling.software.proprietary.security.CustomAuthenticationSuccessHandler<br/>In method new stirling.software.proprietary.security.CustomAuthenticationSuccessHandler(LoginAttemptService, UserService, JwtServiceInterface)<br/>Field stirling.software.proprietary.security.CustomAuthenticationSuccessHandler.jwtService<br/>Local variable named jwtService<br/>At CustomAuthenticationSuccessHandler.java:[line 40]<br/>At CustomAuthenticationSuccessHandler.java:[line 40]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.CustomAuthenticationSuccessHandler(LoginAttemptService, UserService, JwtServiceInterface) may expose internal representation by storing an externally mutable object into CustomAuthenticationSuccessHandler.userService<br/>
+                  <br/>
+                  <br/>In file CustomAuthenticationSuccessHandler.java CustomAuthenticationSuccessHandler.java,
+					
+						line 39 39<br/>In class stirling.software.proprietary.security.CustomAuthenticationSuccessHandler<br/>In method new stirling.software.proprietary.security.CustomAuthenticationSuccessHandler(LoginAttemptService, UserService, JwtServiceInterface)<br/>Field stirling.software.proprietary.security.CustomAuthenticationSuccessHandler.userService<br/>Local variable named userService<br/>At CustomAuthenticationSuccessHandler.java:[line 39]<br/>At CustomAuthenticationSuccessHandler.java:[line 39]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.CustomLogoutSuccessHandler(ApplicationProperties$Security, AppConfig, JwtServiceInterface) may expose internal representation by storing an externally mutable object into CustomLogoutSuccessHandler.jwtService<br/>
+                  <br/>
+                  <br/>In file CustomLogoutSuccessHandler.java CustomLogoutSuccessHandler.java,
+					
+						line 41 41<br/>In class stirling.software.proprietary.security.CustomLogoutSuccessHandler<br/>In method new stirling.software.proprietary.security.CustomLogoutSuccessHandler(ApplicationProperties$Security, AppConfig, JwtServiceInterface)<br/>Field stirling.software.proprietary.security.CustomLogoutSuccessHandler.jwtService<br/>Local variable named jwtService<br/>At CustomLogoutSuccessHandler.java:[line 41]<br/>At CustomLogoutSuccessHandler.java:[line 41]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.CustomLogoutSuccessHandler(ApplicationProperties$Security, AppConfig, JwtServiceInterface) may expose internal representation by storing an externally mutable object into CustomLogoutSuccessHandler.securityProperties<br/>
+                  <br/>
+                  <br/>In file CustomLogoutSuccessHandler.java CustomLogoutSuccessHandler.java,
+					
+						line 41 41<br/>In class stirling.software.proprietary.security.CustomLogoutSuccessHandler<br/>In method new stirling.software.proprietary.security.CustomLogoutSuccessHandler(ApplicationProperties$Security, AppConfig, JwtServiceInterface)<br/>Field stirling.software.proprietary.security.CustomLogoutSuccessHandler.securityProperties<br/>Local variable named securityProperties<br/>At CustomLogoutSuccessHandler.java:[line 41]<br/>At CustomLogoutSuccessHandler.java:[line 41]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.InitialSecuritySetup(UserService, TeamService, ApplicationProperties, DatabaseServiceInterface) may expose internal representation by storing an externally mutable object into InitialSecuritySetup.applicationProperties<br/>
+                  <br/>
+                  <br/>In file InitialSecuritySetup.java InitialSecuritySetup.java,
+					
+						line 27 27<br/>In class stirling.software.proprietary.security.InitialSecuritySetup<br/>In method new stirling.software.proprietary.security.InitialSecuritySetup(UserService, TeamService, ApplicationProperties, DatabaseServiceInterface)<br/>Field stirling.software.proprietary.security.InitialSecuritySetup.applicationProperties<br/>Local variable named applicationProperties<br/>At InitialSecuritySetup.java:[line 27]<br/>At InitialSecuritySetup.java:[line 27]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.InitialSecuritySetup(UserService, TeamService, ApplicationProperties, DatabaseServiceInterface) may expose internal representation by storing an externally mutable object into InitialSecuritySetup.databaseService<br/>
+                  <br/>
+                  <br/>In file InitialSecuritySetup.java InitialSecuritySetup.java,
+					
+						line 27 27<br/>In class stirling.software.proprietary.security.InitialSecuritySetup<br/>In method new stirling.software.proprietary.security.InitialSecuritySetup(UserService, TeamService, ApplicationProperties, DatabaseServiceInterface)<br/>Field stirling.software.proprietary.security.InitialSecuritySetup.databaseService<br/>Local variable named databaseService<br/>At InitialSecuritySetup.java:[line 27]<br/>At InitialSecuritySetup.java:[line 27]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.InitialSecuritySetup(UserService, TeamService, ApplicationProperties, DatabaseServiceInterface) may expose internal representation by storing an externally mutable object into InitialSecuritySetup.userService<br/>
+                  <br/>
+                  <br/>In file InitialSecuritySetup.java InitialSecuritySetup.java,
+					
+						line 27 27<br/>In class stirling.software.proprietary.security.InitialSecuritySetup<br/>In method new stirling.software.proprietary.security.InitialSecuritySetup(UserService, TeamService, ApplicationProperties, DatabaseServiceInterface)<br/>Field stirling.software.proprietary.security.InitialSecuritySetup.userService<br/>Local variable named userService<br/>At InitialSecuritySetup.java:[line 27]<br/>At InitialSecuritySetup.java:[line 27]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.config.AccountWebController(ApplicationProperties, SessionPersistentRegistry, UserRepository, TeamRepository) may expose internal representation by storing an externally mutable object into AccountWebController.applicationProperties<br/>
+                  <br/>
+                  <br/>In file AccountWebController.java AccountWebController.java,
+					
+						line 68 68<br/>In class stirling.software.proprietary.security.config.AccountWebController<br/>In method new stirling.software.proprietary.security.config.AccountWebController(ApplicationProperties, SessionPersistentRegistry, UserRepository, TeamRepository)<br/>Field stirling.software.proprietary.security.config.AccountWebController.applicationProperties<br/>Local variable named applicationProperties<br/>At AccountWebController.java:[line 68]<br/>At AccountWebController.java:[line 68]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.config.AccountWebController(ApplicationProperties, SessionPersistentRegistry, UserRepository, TeamRepository) may expose internal representation by storing an externally mutable object into AccountWebController.sessionPersistentRegistry<br/>
+                  <br/>
+                  <br/>In file AccountWebController.java AccountWebController.java,
+					
+						line 69 69<br/>In class stirling.software.proprietary.security.config.AccountWebController<br/>In method new stirling.software.proprietary.security.config.AccountWebController(ApplicationProperties, SessionPersistentRegistry, UserRepository, TeamRepository)<br/>Field stirling.software.proprietary.security.config.AccountWebController.sessionPersistentRegistry<br/>Local variable named sessionPersistentRegistry<br/>At AccountWebController.java:[line 69]<br/>At AccountWebController.java:[line 69]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.configuration.DatabaseConfig(ApplicationProperties$Datasource, boolean) may expose internal representation by storing an externally mutable object into DatabaseConfig.datasource<br/>
+                  <br/>
+                  <br/>In file DatabaseConfig.java DatabaseConfig.java,
+					
+						line 51 51<br/>In class stirling.software.proprietary.security.configuration.DatabaseConfig<br/>In method new stirling.software.proprietary.security.configuration.DatabaseConfig(ApplicationProperties$Datasource, boolean)<br/>Field stirling.software.proprietary.security.configuration.DatabaseConfig.datasource<br/>Local variable named datasource<br/>At DatabaseConfig.java:[line 51]<br/>At DatabaseConfig.java:[line 51]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.configuration.MailConfig(ApplicationProperties) may expose internal representation by storing an externally mutable object into MailConfig.applicationProperties<br/>
+                  <br/>
+                  <br/>In file MailConfig.java MailConfig.java,
+					
+						line 23 23<br/>In class stirling.software.proprietary.security.configuration.MailConfig<br/>In method new stirling.software.proprietary.security.configuration.MailConfig(ApplicationProperties)<br/>Field stirling.software.proprietary.security.configuration.MailConfig.applicationProperties<br/>Local variable named applicationProperties<br/>At MailConfig.java:[line 23]<br/>At MailConfig.java:[line 23]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.configuration.SecurityConfiguration(PersistentLoginRepository, CustomUserDetailsService, UserService, boolean, boolean, AppConfig, ApplicationProperties$Security, UserAuthenticationFilter, JwtServiceInterface, JwtAuthenticationEntryPoint, LoginAttemptService, FirstLoginFilter, SessionPersistentRegistry, GrantedAuthoritiesMapper, RelyingPartyRegistrationRepository, OpenSaml4AuthenticationRequestResolver) may expose internal representation by storing an externally mutable object into SecurityConfiguration.jwtService<br/>
+                  <br/>
+                  <br/>In file SecurityConfiguration.java SecurityConfiguration.java,
+					
+						line 110 110<br/>In class stirling.software.proprietary.security.configuration.SecurityConfiguration<br/>In method new stirling.software.proprietary.security.configuration.SecurityConfiguration(PersistentLoginRepository, CustomUserDetailsService, UserService, boolean, boolean, AppConfig, ApplicationProperties$Security, UserAuthenticationFilter, JwtServiceInterface, JwtAuthenticationEntryPoint, LoginAttemptService, FirstLoginFilter, SessionPersistentRegistry, GrantedAuthoritiesMapper, RelyingPartyRegistrationRepository, OpenSaml4AuthenticationRequestResolver)<br/>Field stirling.software.proprietary.security.configuration.SecurityConfiguration.jwtService<br/>Local variable named jwtService<br/>At SecurityConfiguration.java:[line 110]<br/>At SecurityConfiguration.java:[line 110]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.configuration.SecurityConfiguration(PersistentLoginRepository, CustomUserDetailsService, UserService, boolean, boolean, AppConfig, ApplicationProperties$Security, UserAuthenticationFilter, JwtServiceInterface, JwtAuthenticationEntryPoint, LoginAttemptService, FirstLoginFilter, SessionPersistentRegistry, GrantedAuthoritiesMapper, RelyingPartyRegistrationRepository, OpenSaml4AuthenticationRequestResolver) may expose internal representation by storing an externally mutable object into SecurityConfiguration.persistentLoginRepository<br/>
+                  <br/>
+                  <br/>In file SecurityConfiguration.java SecurityConfiguration.java,
+					
+						line 115 115<br/>In class stirling.software.proprietary.security.configuration.SecurityConfiguration<br/>In method new stirling.software.proprietary.security.configuration.SecurityConfiguration(PersistentLoginRepository, CustomUserDetailsService, UserService, boolean, boolean, AppConfig, ApplicationProperties$Security, UserAuthenticationFilter, JwtServiceInterface, JwtAuthenticationEntryPoint, LoginAttemptService, FirstLoginFilter, SessionPersistentRegistry, GrantedAuthoritiesMapper, RelyingPartyRegistrationRepository, OpenSaml4AuthenticationRequestResolver)<br/>Field stirling.software.proprietary.security.configuration.SecurityConfiguration.persistentLoginRepository<br/>Local variable named persistentLoginRepository<br/>At SecurityConfiguration.java:[line 115]<br/>At SecurityConfiguration.java:[line 115]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.configuration.SecurityConfiguration(PersistentLoginRepository, CustomUserDetailsService, UserService, boolean, boolean, AppConfig, ApplicationProperties$Security, UserAuthenticationFilter, JwtServiceInterface, JwtAuthenticationEntryPoint, LoginAttemptService, FirstLoginFilter, SessionPersistentRegistry, GrantedAuthoritiesMapper, RelyingPartyRegistrationRepository, OpenSaml4AuthenticationRequestResolver) may expose internal representation by storing an externally mutable object into SecurityConfiguration.securityProperties<br/>
+                  <br/>
+                  <br/>In file SecurityConfiguration.java SecurityConfiguration.java,
+					
+						line 108 108<br/>In class stirling.software.proprietary.security.configuration.SecurityConfiguration<br/>In method new stirling.software.proprietary.security.configuration.SecurityConfiguration(PersistentLoginRepository, CustomUserDetailsService, UserService, boolean, boolean, AppConfig, ApplicationProperties$Security, UserAuthenticationFilter, JwtServiceInterface, JwtAuthenticationEntryPoint, LoginAttemptService, FirstLoginFilter, SessionPersistentRegistry, GrantedAuthoritiesMapper, RelyingPartyRegistrationRepository, OpenSaml4AuthenticationRequestResolver)<br/>Field stirling.software.proprietary.security.configuration.SecurityConfiguration.securityProperties<br/>Local variable named securityProperties<br/>At SecurityConfiguration.java:[line 108]<br/>At SecurityConfiguration.java:[line 108]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.configuration.SecurityConfiguration(PersistentLoginRepository, CustomUserDetailsService, UserService, boolean, boolean, AppConfig, ApplicationProperties$Security, UserAuthenticationFilter, JwtServiceInterface, JwtAuthenticationEntryPoint, LoginAttemptService, FirstLoginFilter, SessionPersistentRegistry, GrantedAuthoritiesMapper, RelyingPartyRegistrationRepository, OpenSaml4AuthenticationRequestResolver) may expose internal representation by storing an externally mutable object into SecurityConfiguration.sessionRegistry<br/>
+                  <br/>
+                  <br/>In file SecurityConfiguration.java SecurityConfiguration.java,
+					
+						line 114 114<br/>In class stirling.software.proprietary.security.configuration.SecurityConfiguration<br/>In method new stirling.software.proprietary.security.configuration.SecurityConfiguration(PersistentLoginRepository, CustomUserDetailsService, UserService, boolean, boolean, AppConfig, ApplicationProperties$Security, UserAuthenticationFilter, JwtServiceInterface, JwtAuthenticationEntryPoint, LoginAttemptService, FirstLoginFilter, SessionPersistentRegistry, GrantedAuthoritiesMapper, RelyingPartyRegistrationRepository, OpenSaml4AuthenticationRequestResolver)<br/>Field stirling.software.proprietary.security.configuration.SecurityConfiguration.sessionRegistry<br/>Local variable named sessionRegistry<br/>At SecurityConfiguration.java:[line 114]<br/>At SecurityConfiguration.java:[line 114]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.configuration.SecurityConfiguration(PersistentLoginRepository, CustomUserDetailsService, UserService, boolean, boolean, AppConfig, ApplicationProperties$Security, UserAuthenticationFilter, JwtServiceInterface, JwtAuthenticationEntryPoint, LoginAttemptService, FirstLoginFilter, SessionPersistentRegistry, GrantedAuthoritiesMapper, RelyingPartyRegistrationRepository, OpenSaml4AuthenticationRequestResolver) may expose internal representation by storing an externally mutable object into SecurityConfiguration.userService<br/>
+                  <br/>
+                  <br/>In file SecurityConfiguration.java SecurityConfiguration.java,
+					
+						line 104 104<br/>In class stirling.software.proprietary.security.configuration.SecurityConfiguration<br/>In method new stirling.software.proprietary.security.configuration.SecurityConfiguration(PersistentLoginRepository, CustomUserDetailsService, UserService, boolean, boolean, AppConfig, ApplicationProperties$Security, UserAuthenticationFilter, JwtServiceInterface, JwtAuthenticationEntryPoint, LoginAttemptService, FirstLoginFilter, SessionPersistentRegistry, GrantedAuthoritiesMapper, RelyingPartyRegistrationRepository, OpenSaml4AuthenticationRequestResolver)<br/>Field stirling.software.proprietary.security.configuration.SecurityConfiguration.userService<br/>Local variable named userService<br/>At SecurityConfiguration.java:[line 104]<br/>At SecurityConfiguration.java:[line 104]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.configuration.ee.EEAppConfig(ApplicationProperties, LicenseKeyChecker) may expose internal representation by storing an externally mutable object into EEAppConfig.applicationProperties<br/>
+                  <br/>
+                  <br/>In file EEAppConfig.java EEAppConfig.java,
+					
+						line 27 27<br/>In class stirling.software.proprietary.security.configuration.ee.EEAppConfig<br/>In method new stirling.software.proprietary.security.configuration.ee.EEAppConfig(ApplicationProperties, LicenseKeyChecker)<br/>Field stirling.software.proprietary.security.configuration.ee.EEAppConfig.applicationProperties<br/>Local variable named applicationProperties<br/>At EEAppConfig.java:[line 27]<br/>At EEAppConfig.java:[line 27]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier(ApplicationProperties) may expose internal representation by storing an externally mutable object into KeygenLicenseVerifier.applicationProperties<br/>
+                  <br/>
+                  <br/>In file KeygenLicenseVerifier.java KeygenLicenseVerifier.java,
+					
+						line 29 29<br/>In class stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier<br/>In method new stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier(ApplicationProperties)<br/>Field stirling.software.proprietary.security.configuration.ee.KeygenLicenseVerifier.applicationProperties<br/>Local variable named applicationProperties<br/>At KeygenLicenseVerifier.java:[line 29]<br/>At KeygenLicenseVerifier.java:[line 29]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.configuration.ee.LicenseKeyChecker(KeygenLicenseVerifier, ApplicationProperties) may expose internal representation by storing an externally mutable object into LicenseKeyChecker.applicationProperties<br/>
+                  <br/>
+                  <br/>In file LicenseKeyChecker.java LicenseKeyChecker.java,
+					
+						line 31 31<br/>In class stirling.software.proprietary.security.configuration.ee.LicenseKeyChecker<br/>In method new stirling.software.proprietary.security.configuration.ee.LicenseKeyChecker(KeygenLicenseVerifier, ApplicationProperties)<br/>Field stirling.software.proprietary.security.configuration.ee.LicenseKeyChecker.applicationProperties<br/>Local variable named applicationProperties<br/>At LicenseKeyChecker.java:[line 31]<br/>At LicenseKeyChecker.java:[line 31]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.controller.api.AdminSettingsController(ApplicationProperties, ObjectMapper) may expose internal representation by storing an externally mutable object into AdminSettingsController.applicationProperties<br/>
+                  <br/>
+                  <br/>In file AdminSettingsController.java AdminSettingsController.java,
+					
+						line 48 48<br/>In class stirling.software.proprietary.security.controller.api.AdminSettingsController<br/>In method new stirling.software.proprietary.security.controller.api.AdminSettingsController(ApplicationProperties, ObjectMapper)<br/>Field stirling.software.proprietary.security.controller.api.AdminSettingsController.applicationProperties<br/>Local variable named applicationProperties<br/>At AdminSettingsController.java:[line 48]<br/>At AdminSettingsController.java:[line 48]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.controller.api.DatabaseController(DatabaseService) may expose internal representation by storing an externally mutable object into DatabaseController.databaseService<br/>
+                  <br/>
+                  <br/>In file DatabaseController.java DatabaseController.java,
+					
+						line 39 39<br/>In class stirling.software.proprietary.security.controller.api.DatabaseController<br/>In method new stirling.software.proprietary.security.controller.api.DatabaseController(DatabaseService)<br/>Field stirling.software.proprietary.security.controller.api.DatabaseController.databaseService<br/>Local variable named databaseService<br/>At DatabaseController.java:[line 39]<br/>At DatabaseController.java:[line 39]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.controller.api.UserController(UserService, SessionPersistentRegistry, ApplicationProperties, TeamRepository, UserRepository) may expose internal representation by storing an externally mutable object into UserController.applicationProperties<br/>
+                  <br/>
+                  <br/>In file UserController.java UserController.java,
+					
+						line 54 54<br/>In class stirling.software.proprietary.security.controller.api.UserController<br/>In method new stirling.software.proprietary.security.controller.api.UserController(UserService, SessionPersistentRegistry, ApplicationProperties, TeamRepository, UserRepository)<br/>Field stirling.software.proprietary.security.controller.api.UserController.applicationProperties<br/>Local variable named applicationProperties<br/>At UserController.java:[line 54]<br/>At UserController.java:[line 54]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.controller.api.UserController(UserService, SessionPersistentRegistry, ApplicationProperties, TeamRepository, UserRepository) may expose internal representation by storing an externally mutable object into UserController.sessionRegistry<br/>
+                  <br/>
+                  <br/>In file UserController.java UserController.java,
+					
+						line 54 54<br/>In class stirling.software.proprietary.security.controller.api.UserController<br/>In method new stirling.software.proprietary.security.controller.api.UserController(UserService, SessionPersistentRegistry, ApplicationProperties, TeamRepository, UserRepository)<br/>Field stirling.software.proprietary.security.controller.api.UserController.sessionRegistry<br/>Local variable named sessionRegistry<br/>At UserController.java:[line 54]<br/>At UserController.java:[line 54]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.controller.api.UserController(UserService, SessionPersistentRegistry, ApplicationProperties, TeamRepository, UserRepository) may expose internal representation by storing an externally mutable object into UserController.userService<br/>
+                  <br/>
+                  <br/>In file UserController.java UserController.java,
+					
+						line 54 54<br/>In class stirling.software.proprietary.security.controller.api.UserController<br/>In method new stirling.software.proprietary.security.controller.api.UserController(UserService, SessionPersistentRegistry, ApplicationProperties, TeamRepository, UserRepository)<br/>Field stirling.software.proprietary.security.controller.api.UserController.userService<br/>Local variable named userService<br/>At UserController.java:[line 54]<br/>At UserController.java:[line 54]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.controller.api.enterprise.DatabaseControllerEnterprise(DatabaseService) may expose internal representation by storing an externally mutable object into DatabaseControllerEnterprise.databaseService<br/>
+                  <br/>
+                  <br/>In file DatabaseControllerEnterprise.java DatabaseControllerEnterprise.java,
+					
+						line 31 31<br/>In class stirling.software.proprietary.security.controller.api.enterprise.DatabaseControllerEnterprise<br/>In method new stirling.software.proprietary.security.controller.api.enterprise.DatabaseControllerEnterprise(DatabaseService)<br/>Field stirling.software.proprietary.security.controller.api.enterprise.DatabaseControllerEnterprise.databaseService<br/>Local variable named databaseService<br/>At DatabaseControllerEnterprise.java:[line 31]<br/>At DatabaseControllerEnterprise.java:[line 31]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.controller.web.DatabaseWebController(DatabaseService) may expose internal representation by storing an externally mutable object into DatabaseWebController.databaseService<br/>
+                  <br/>
+                  <br/>In file DatabaseWebController.java DatabaseWebController.java,
+					
+						line 22 22<br/>In class stirling.software.proprietary.security.controller.web.DatabaseWebController<br/>In method new stirling.software.proprietary.security.controller.web.DatabaseWebController(DatabaseService)<br/>Field stirling.software.proprietary.security.controller.web.DatabaseWebController.databaseService<br/>Local variable named databaseService<br/>At DatabaseWebController.java:[line 22]<br/>At DatabaseWebController.java:[line 22]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.database.ScheduledTasks(DatabaseServiceInterface) may expose internal representation by storing an externally mutable object into ScheduledTasks.databaseService<br/>
+                  <br/>
+                  <br/>In file ScheduledTasks.java ScheduledTasks.java,
+					
+						line 16 16<br/>In class stirling.software.proprietary.security.database.ScheduledTasks<br/>In method new stirling.software.proprietary.security.database.ScheduledTasks(DatabaseServiceInterface)<br/>Field stirling.software.proprietary.security.database.ScheduledTasks.databaseService<br/>Local variable named databaseService<br/>At ScheduledTasks.java:[line 16]<br/>At ScheduledTasks.java:[line 16]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.database.repository.JPATokenRepositoryImpl(PersistentLoginRepository) may expose internal representation by storing an externally mutable object into JPATokenRepositoryImpl.persistentLoginRepository<br/>
+                  <br/>
+                  <br/>In file JPATokenRepositoryImpl.java JPATokenRepositoryImpl.java,
+					
+						line 16 16<br/>In class stirling.software.proprietary.security.database.repository.JPATokenRepositoryImpl<br/>In method new stirling.software.proprietary.security.database.repository.JPATokenRepositoryImpl(PersistentLoginRepository)<br/>Field stirling.software.proprietary.security.database.repository.JPATokenRepositoryImpl.persistentLoginRepository<br/>Local variable named persistentLoginRepository<br/>At JPATokenRepositoryImpl.java:[line 16]<br/>At JPATokenRepositoryImpl.java:[line 16]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.filter.FirstLoginFilter(UserService) may expose internal representation by storing an externally mutable object into FirstLoginFilter.userService<br/>
+                  <br/>
+                  <br/>In file FirstLoginFilter.java FirstLoginFilter.java,
+					
+						line 34 34<br/>In class stirling.software.proprietary.security.filter.FirstLoginFilter<br/>In method new stirling.software.proprietary.security.filter.FirstLoginFilter(UserService)<br/>Field stirling.software.proprietary.security.filter.FirstLoginFilter.userService<br/>Local variable named userService<br/>At FirstLoginFilter.java:[line 34]<br/>At FirstLoginFilter.java:[line 34]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.filter.JwtAuthenticationFilter(JwtServiceInterface, UserService, CustomUserDetailsService, AuthenticationEntryPoint, ApplicationProperties$Security) may expose internal representation by storing an externally mutable object into JwtAuthenticationFilter.jwtService<br/>
+                  <br/>
+                  <br/>In file JwtAuthenticationFilter.java JwtAuthenticationFilter.java,
+					
+						line 53 53<br/>In class stirling.software.proprietary.security.filter.JwtAuthenticationFilter<br/>In method new stirling.software.proprietary.security.filter.JwtAuthenticationFilter(JwtServiceInterface, UserService, CustomUserDetailsService, AuthenticationEntryPoint, ApplicationProperties$Security)<br/>Field stirling.software.proprietary.security.filter.JwtAuthenticationFilter.jwtService<br/>Local variable named jwtService<br/>At JwtAuthenticationFilter.java:[line 53]<br/>At JwtAuthenticationFilter.java:[line 53]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.filter.JwtAuthenticationFilter(JwtServiceInterface, UserService, CustomUserDetailsService, AuthenticationEntryPoint, ApplicationProperties$Security) may expose internal representation by storing an externally mutable object into JwtAuthenticationFilter.securityProperties<br/>
+                  <br/>
+                  <br/>In file JwtAuthenticationFilter.java JwtAuthenticationFilter.java,
+					
+						line 57 57<br/>In class stirling.software.proprietary.security.filter.JwtAuthenticationFilter<br/>In method new stirling.software.proprietary.security.filter.JwtAuthenticationFilter(JwtServiceInterface, UserService, CustomUserDetailsService, AuthenticationEntryPoint, ApplicationProperties$Security)<br/>Field stirling.software.proprietary.security.filter.JwtAuthenticationFilter.securityProperties<br/>Local variable named securityProperties<br/>At JwtAuthenticationFilter.java:[line 57]<br/>At JwtAuthenticationFilter.java:[line 57]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.filter.JwtAuthenticationFilter(JwtServiceInterface, UserService, CustomUserDetailsService, AuthenticationEntryPoint, ApplicationProperties$Security) may expose internal representation by storing an externally mutable object into JwtAuthenticationFilter.userService<br/>
+                  <br/>
+                  <br/>In file JwtAuthenticationFilter.java JwtAuthenticationFilter.java,
+					
+						line 54 54<br/>In class stirling.software.proprietary.security.filter.JwtAuthenticationFilter<br/>In method new stirling.software.proprietary.security.filter.JwtAuthenticationFilter(JwtServiceInterface, UserService, CustomUserDetailsService, AuthenticationEntryPoint, ApplicationProperties$Security)<br/>Field stirling.software.proprietary.security.filter.JwtAuthenticationFilter.userService<br/>Local variable named userService<br/>At JwtAuthenticationFilter.java:[line 54]<br/>At JwtAuthenticationFilter.java:[line 54]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.filter.UserAuthenticationFilter(ApplicationProperties$Security, UserService, SessionPersistentRegistry, boolean) may expose internal representation by storing an externally mutable object into UserAuthenticationFilter.securityProp<br/>
+                  <br/>
+                  <br/>In file UserAuthenticationFilter.java UserAuthenticationFilter.java,
+					
+						line 49 49<br/>In class stirling.software.proprietary.security.filter.UserAuthenticationFilter<br/>In method new stirling.software.proprietary.security.filter.UserAuthenticationFilter(ApplicationProperties$Security, UserService, SessionPersistentRegistry, boolean)<br/>Field stirling.software.proprietary.security.filter.UserAuthenticationFilter.securityProp<br/>Local variable named securityProp<br/>At UserAuthenticationFilter.java:[line 49]<br/>At UserAuthenticationFilter.java:[line 49]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.filter.UserAuthenticationFilter(ApplicationProperties$Security, UserService, SessionPersistentRegistry, boolean) may expose internal representation by storing an externally mutable object into UserAuthenticationFilter.sessionPersistentRegistry<br/>
+                  <br/>
+                  <br/>In file UserAuthenticationFilter.java UserAuthenticationFilter.java,
+					
+						line 51 51<br/>In class stirling.software.proprietary.security.filter.UserAuthenticationFilter<br/>In method new stirling.software.proprietary.security.filter.UserAuthenticationFilter(ApplicationProperties$Security, UserService, SessionPersistentRegistry, boolean)<br/>Field stirling.software.proprietary.security.filter.UserAuthenticationFilter.sessionPersistentRegistry<br/>Local variable named sessionPersistentRegistry<br/>At UserAuthenticationFilter.java:[line 51]<br/>At UserAuthenticationFilter.java:[line 51]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.filter.UserAuthenticationFilter(ApplicationProperties$Security, UserService, SessionPersistentRegistry, boolean) may expose internal representation by storing an externally mutable object into UserAuthenticationFilter.userService<br/>
+                  <br/>
+                  <br/>In file UserAuthenticationFilter.java UserAuthenticationFilter.java,
+					
+						line 50 50<br/>In class stirling.software.proprietary.security.filter.UserAuthenticationFilter<br/>In method new stirling.software.proprietary.security.filter.UserAuthenticationFilter(ApplicationProperties$Security, UserService, SessionPersistentRegistry, boolean)<br/>Field stirling.software.proprietary.security.filter.UserAuthenticationFilter.userService<br/>Local variable named userService<br/>At UserAuthenticationFilter.java:[line 50]<br/>At UserAuthenticationFilter.java:[line 50]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.model.Authority(String, User) may expose internal representation by storing an externally mutable object into Authority.user<br/>
+                  <br/>
+                  <br/>In file Authority.java Authority.java,
+					
+						line 42 42<br/>In class stirling.software.proprietary.security.model.Authority<br/>In method new stirling.software.proprietary.security.model.Authority(String, User)<br/>Field stirling.software.proprietary.security.model.Authority.user<br/>Local variable named user<br/>At Authority.java:[line 42]<br/>At Authority.java:[line 42]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.model.Authority.setUser(User) may expose internal representation by storing an externally mutable object into Authority.user<br/>
+                  <br/>
+                  <br/>In file Authority.java Authority.java,
+					
+						line 22 22<br/>In class stirling.software.proprietary.security.model.Authority<br/>In method stirling.software.proprietary.security.model.Authority.setUser(User)<br/>Field stirling.software.proprietary.security.model.Authority.user<br/>Local variable named user<br/>At Authority.java:[line 22]<br/>At Authority.java:[line 22]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.model.User.setAuthorities(Set) may expose internal representation by storing an externally mutable object into User.authorities<br/>
+                  <br/>
+                  <br/>In file User.java User.java,
+					
+						line 28 28<br/>In class stirling.software.proprietary.security.model.User<br/>In method stirling.software.proprietary.security.model.User.setAuthorities(Set)<br/>Field stirling.software.proprietary.security.model.User.authorities<br/>Local variable named authorities<br/>At User.java:[line 28]<br/>At User.java:[line 28]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.model.User.setSettings(Map) may expose internal representation by storing an externally mutable object into User.settings<br/>
+                  <br/>
+                  <br/>In file User.java User.java,
+					
+						line 28 28<br/>In class stirling.software.proprietary.security.model.User<br/>In method stirling.software.proprietary.security.model.User.setSettings(Map)<br/>Field stirling.software.proprietary.security.model.User.settings<br/>Local variable named settings<br/>At User.java:[line 28]<br/>At User.java:[line 28]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.model.User.setTeam(Team) may expose internal representation by storing an externally mutable object into User.team<br/>
+                  <br/>
+                  <br/>In file User.java User.java,
+					
+						line 28 28<br/>In class stirling.software.proprietary.security.model.User<br/>In method stirling.software.proprietary.security.model.User.setTeam(Team)<br/>Field stirling.software.proprietary.security.model.User.team<br/>Local variable named team<br/>At User.java:[line 28]<br/>At User.java:[line 28]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>stirling.software.proprietary.security.model.api.admin.UpdateSettingsRequest.setSettings(Map) may expose internal representation by storing an externally mutable object into UpdateSettingsRequest.settings<br/>
+                  <br/>
+                  <br/>In file UpdateSettingsRequest.java UpdateSettingsRequest.java,
+					
+						line 12 12<br/>In class stirling.software.proprietary.security.model.api.admin.UpdateSettingsRequest<br/>In method stirling.software.proprietary.security.model.api.admin.UpdateSettingsRequest.setSettings(Map)<br/>Field stirling.software.proprietary.security.model.api.admin.UpdateSettingsRequest.settings<br/>Local variable named settings<br/>At UpdateSettingsRequest.java:[line 12]<br/>At UpdateSettingsRequest.java:[line 12]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$OAUTH2, UserService, JwtServiceInterface) may expose internal representation by storing an externally mutable object into CustomOAuth2AuthenticationSuccessHandler.jwtService<br/>
+                  <br/>
+                  <br/>In file CustomOAuth2AuthenticationSuccessHandler.java CustomOAuth2AuthenticationSuccessHandler.java,
+					
+						line 35 35<br/>In class stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler<br/>In method new stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$OAUTH2, UserService, JwtServiceInterface)<br/>Field stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler.jwtService<br/>Local variable named jwtService<br/>At CustomOAuth2AuthenticationSuccessHandler.java:[line 35]<br/>At CustomOAuth2AuthenticationSuccessHandler.java:[line 35]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$OAUTH2, UserService, JwtServiceInterface) may expose internal representation by storing an externally mutable object into CustomOAuth2AuthenticationSuccessHandler.oauth2Properties<br/>
+                  <br/>
+                  <br/>In file CustomOAuth2AuthenticationSuccessHandler.java CustomOAuth2AuthenticationSuccessHandler.java,
+					
+						line 35 35<br/>In class stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler<br/>In method new stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$OAUTH2, UserService, JwtServiceInterface)<br/>Field stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler.oauth2Properties<br/>Local variable named oauth2Properties<br/>At CustomOAuth2AuthenticationSuccessHandler.java:[line 35]<br/>At CustomOAuth2AuthenticationSuccessHandler.java:[line 35]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$OAUTH2, UserService, JwtServiceInterface) may expose internal representation by storing an externally mutable object into CustomOAuth2AuthenticationSuccessHandler.userService<br/>
+                  <br/>
+                  <br/>In file CustomOAuth2AuthenticationSuccessHandler.java CustomOAuth2AuthenticationSuccessHandler.java,
+					
+						line 35 35<br/>In class stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler<br/>In method new stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$OAUTH2, UserService, JwtServiceInterface)<br/>Field stirling.software.proprietary.security.oauth2.CustomOAuth2AuthenticationSuccessHandler.userService<br/>Local variable named userService<br/>At CustomOAuth2AuthenticationSuccessHandler.java:[line 35]<br/>At CustomOAuth2AuthenticationSuccessHandler.java:[line 35]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.oauth2.OAuth2Configuration(ApplicationProperties, UserService) may expose internal representation by storing an externally mutable object into OAuth2Configuration.applicationProperties<br/>
+                  <br/>
+                  <br/>In file OAuth2Configuration.java OAuth2Configuration.java,
+					
+						line 56 56<br/>In class stirling.software.proprietary.security.oauth2.OAuth2Configuration<br/>In method new stirling.software.proprietary.security.oauth2.OAuth2Configuration(ApplicationProperties, UserService)<br/>Field stirling.software.proprietary.security.oauth2.OAuth2Configuration.applicationProperties<br/>Local variable named applicationProperties<br/>At OAuth2Configuration.java:[line 56]<br/>At OAuth2Configuration.java:[line 56]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.oauth2.OAuth2Configuration(ApplicationProperties, UserService) may expose internal representation by storing an externally mutable object into OAuth2Configuration.userService<br/>
+                  <br/>
+                  <br/>In file OAuth2Configuration.java OAuth2Configuration.java,
+					
+						line 55 55<br/>In class stirling.software.proprietary.security.oauth2.OAuth2Configuration<br/>In method new stirling.software.proprietary.security.oauth2.OAuth2Configuration(ApplicationProperties, UserService)<br/>Field stirling.software.proprietary.security.oauth2.OAuth2Configuration.userService<br/>Local variable named userService<br/>At OAuth2Configuration.java:[line 55]<br/>At OAuth2Configuration.java:[line 55]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal(String, Map, String, List) may expose internal representation by storing an externally mutable object into CustomSaml2AuthenticatedPrincipal.attributes<br/>
+                  <br/>
+                  <br/>In file CustomSaml2AuthenticatedPrincipal.java CustomSaml2AuthenticatedPrincipal.java,
+					
+						line 11 11<br/>In class stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal<br/>In method new stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal(String, Map, String, List)<br/>Field stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.attributes<br/>Local variable named attributes<br/>At CustomSaml2AuthenticatedPrincipal.java:[line 11]<br/>At CustomSaml2AuthenticatedPrincipal.java:[line 11]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal(String, Map, String, List) may expose internal representation by storing an externally mutable object into CustomSaml2AuthenticatedPrincipal.sessionIndexes<br/>
+                  <br/>
+                  <br/>In file CustomSaml2AuthenticatedPrincipal.java CustomSaml2AuthenticatedPrincipal.java,
+					
+						line 11 11<br/>In class stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal<br/>In method new stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal(String, Map, String, List)<br/>Field stirling.software.proprietary.security.saml2.CustomSaml2AuthenticatedPrincipal.sessionIndexes<br/>Local variable named sessionIndexes<br/>At CustomSaml2AuthenticatedPrincipal.java:[line 11]<br/>At CustomSaml2AuthenticatedPrincipal.java:[line 11]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$SAML2, UserService, JwtServiceInterface) may expose internal representation by storing an externally mutable object into CustomSaml2AuthenticationSuccessHandler.jwtService<br/>
+                  <br/>
+                  <br/>In file CustomSaml2AuthenticationSuccessHandler.java CustomSaml2AuthenticationSuccessHandler.java,
+					
+						line 34 34<br/>In class stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler<br/>In method new stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$SAML2, UserService, JwtServiceInterface)<br/>Field stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler.jwtService<br/>Local variable named jwtService<br/>At CustomSaml2AuthenticationSuccessHandler.java:[line 34]<br/>At CustomSaml2AuthenticationSuccessHandler.java:[line 34]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$SAML2, UserService, JwtServiceInterface) may expose internal representation by storing an externally mutable object into CustomSaml2AuthenticationSuccessHandler.saml2Properties<br/>
+                  <br/>
+                  <br/>In file CustomSaml2AuthenticationSuccessHandler.java CustomSaml2AuthenticationSuccessHandler.java,
+					
+						line 34 34<br/>In class stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler<br/>In method new stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$SAML2, UserService, JwtServiceInterface)<br/>Field stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler.saml2Properties<br/>Local variable named saml2Properties<br/>At CustomSaml2AuthenticationSuccessHandler.java:[line 34]<br/>At CustomSaml2AuthenticationSuccessHandler.java:[line 34]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$SAML2, UserService, JwtServiceInterface) may expose internal representation by storing an externally mutable object into CustomSaml2AuthenticationSuccessHandler.userService<br/>
+                  <br/>
+                  <br/>In file CustomSaml2AuthenticationSuccessHandler.java CustomSaml2AuthenticationSuccessHandler.java,
+					
+						line 34 34<br/>In class stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler<br/>In method new stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler(LoginAttemptService, ApplicationProperties$Security$SAML2, UserService, JwtServiceInterface)<br/>Field stirling.software.proprietary.security.saml2.CustomSaml2AuthenticationSuccessHandler.userService<br/>Local variable named userService<br/>At CustomSaml2AuthenticationSuccessHandler.java:[line 34]<br/>At CustomSaml2AuthenticationSuccessHandler.java:[line 34]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.saml2.CustomSaml2ResponseAuthenticationConverter(UserService) may expose internal representation by storing an externally mutable object into CustomSaml2ResponseAuthenticationConverter.userService<br/>
+                  <br/>
+                  <br/>In file CustomSaml2ResponseAuthenticationConverter.java CustomSaml2ResponseAuthenticationConverter.java,
+					
+						line 28 28<br/>In class stirling.software.proprietary.security.saml2.CustomSaml2ResponseAuthenticationConverter<br/>In method new stirling.software.proprietary.security.saml2.CustomSaml2ResponseAuthenticationConverter(UserService)<br/>Field stirling.software.proprietary.security.saml2.CustomSaml2ResponseAuthenticationConverter.userService<br/>Local variable named userService<br/>At CustomSaml2ResponseAuthenticationConverter.java:[line 28]<br/>At CustomSaml2ResponseAuthenticationConverter.java:[line 28]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.saml2.JwtSaml2AuthenticationRequestRepository(Map, JwtServiceInterface, RelyingPartyRegistrationRepository) may expose internal representation by storing an externally mutable object into JwtSaml2AuthenticationRequestRepository.jwtService<br/>
+                  <br/>
+                  <br/>In file JwtSaml2AuthenticationRequestRepository.java JwtSaml2AuthenticationRequestRepository.java,
+					
+						line 32 32<br/>In class stirling.software.proprietary.security.saml2.JwtSaml2AuthenticationRequestRepository<br/>In method new stirling.software.proprietary.security.saml2.JwtSaml2AuthenticationRequestRepository(Map, JwtServiceInterface, RelyingPartyRegistrationRepository)<br/>Field stirling.software.proprietary.security.saml2.JwtSaml2AuthenticationRequestRepository.jwtService<br/>Local variable named jwtService<br/>At JwtSaml2AuthenticationRequestRepository.java:[line 32]<br/>At JwtSaml2AuthenticationRequestRepository.java:[line 32]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.saml2.JwtSaml2AuthenticationRequestRepository(Map, JwtServiceInterface, RelyingPartyRegistrationRepository) may expose internal representation by storing an externally mutable object into JwtSaml2AuthenticationRequestRepository.tokenStore<br/>
+                  <br/>
+                  <br/>In file JwtSaml2AuthenticationRequestRepository.java JwtSaml2AuthenticationRequestRepository.java,
+					
+						line 31 31<br/>In class stirling.software.proprietary.security.saml2.JwtSaml2AuthenticationRequestRepository<br/>In method new stirling.software.proprietary.security.saml2.JwtSaml2AuthenticationRequestRepository(Map, JwtServiceInterface, RelyingPartyRegistrationRepository)<br/>Field stirling.software.proprietary.security.saml2.JwtSaml2AuthenticationRequestRepository.tokenStore<br/>Local variable named tokenStore<br/>At JwtSaml2AuthenticationRequestRepository.java:[line 31]<br/>At JwtSaml2AuthenticationRequestRepository.java:[line 31]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.saml2.Saml2Configuration(ApplicationProperties) may expose internal representation by storing an externally mutable object into Saml2Configuration.applicationProperties<br/>
+                  <br/>
+                  <br/>In file Saml2Configuration.java Saml2Configuration.java,
+					
+						line 35 35<br/>In class stirling.software.proprietary.security.saml2.Saml2Configuration<br/>In method new stirling.software.proprietary.security.saml2.Saml2Configuration(ApplicationProperties)<br/>Field stirling.software.proprietary.security.saml2.Saml2Configuration.applicationProperties<br/>Local variable named applicationProperties<br/>At Saml2Configuration.java:[line 35]<br/>At Saml2Configuration.java:[line 35]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.CustomOAuth2UserService(ApplicationProperties$Security, UserService, LoginAttemptService) may expose internal representation by storing an externally mutable object into CustomOAuth2UserService.securityProperties<br/>
+                  <br/>
+                  <br/>In file CustomOAuth2UserService.java CustomOAuth2UserService.java,
+					
+						line 37 37<br/>In class stirling.software.proprietary.security.service.CustomOAuth2UserService<br/>In method new stirling.software.proprietary.security.service.CustomOAuth2UserService(ApplicationProperties$Security, UserService, LoginAttemptService)<br/>Field stirling.software.proprietary.security.service.CustomOAuth2UserService.securityProperties<br/>Local variable named securityProperties<br/>At CustomOAuth2UserService.java:[line 37]<br/>At CustomOAuth2UserService.java:[line 37]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.CustomOAuth2UserService(ApplicationProperties$Security, UserService, LoginAttemptService) may expose internal representation by storing an externally mutable object into CustomOAuth2UserService.userService<br/>
+                  <br/>
+                  <br/>In file CustomOAuth2UserService.java CustomOAuth2UserService.java,
+					
+						line 38 38<br/>In class stirling.software.proprietary.security.service.CustomOAuth2UserService<br/>In method new stirling.software.proprietary.security.service.CustomOAuth2UserService(ApplicationProperties$Security, UserService, LoginAttemptService)<br/>Field stirling.software.proprietary.security.service.CustomOAuth2UserService.userService<br/>Local variable named userService<br/>At CustomOAuth2UserService.java:[line 38]<br/>At CustomOAuth2UserService.java:[line 38]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.CustomUserDetailsService(UserRepository, LoginAttemptService, ApplicationProperties$Security) may expose internal representation by storing an externally mutable object into CustomUserDetailsService.securityProperties<br/>
+                  <br/>
+                  <br/>In file CustomUserDetailsService.java CustomUserDetailsService.java,
+					
+						line 19 19<br/>In class stirling.software.proprietary.security.service.CustomUserDetailsService<br/>In method new stirling.software.proprietary.security.service.CustomUserDetailsService(UserRepository, LoginAttemptService, ApplicationProperties$Security)<br/>Field stirling.software.proprietary.security.service.CustomUserDetailsService.securityProperties<br/>Local variable named securityProperties<br/>At CustomUserDetailsService.java:[line 19]<br/>At CustomUserDetailsService.java:[line 19]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.DatabaseService(ApplicationProperties$Datasource, DataSource, DatabaseNotificationServiceInterface) may expose internal representation by storing an externally mutable object into DatabaseService.dataSource<br/>
+                  <br/>
+                  <br/>In file DatabaseService.java DatabaseService.java,
+					
+						line 59 59<br/>In class stirling.software.proprietary.security.service.DatabaseService<br/>In method new stirling.software.proprietary.security.service.DatabaseService(ApplicationProperties$Datasource, DataSource, DatabaseNotificationServiceInterface)<br/>Field stirling.software.proprietary.security.service.DatabaseService.dataSource<br/>Local variable named dataSource<br/>At DatabaseService.java:[line 59]<br/>At DatabaseService.java:[line 59]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.DatabaseService(ApplicationProperties$Datasource, DataSource, DatabaseNotificationServiceInterface) may expose internal representation by storing an externally mutable object into DatabaseService.datasourceProps<br/>
+                  <br/>
+                  <br/>In file DatabaseService.java DatabaseService.java,
+					
+						line 58 58<br/>In class stirling.software.proprietary.security.service.DatabaseService<br/>In method new stirling.software.proprietary.security.service.DatabaseService(ApplicationProperties$Datasource, DataSource, DatabaseNotificationServiceInterface)<br/>Field stirling.software.proprietary.security.service.DatabaseService.datasourceProps<br/>Local variable named datasourceProps<br/>At DatabaseService.java:[line 58]<br/>At DatabaseService.java:[line 58]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.EmailService(JavaMailSender, ApplicationProperties) may expose internal representation by storing an externally mutable object into EmailService.applicationProperties<br/>
+                  <br/>
+                  <br/>In file EmailService.java EmailService.java,
+					
+						line 26 26<br/>In class stirling.software.proprietary.security.service.EmailService<br/>In method new stirling.software.proprietary.security.service.EmailService(JavaMailSender, ApplicationProperties)<br/>Field stirling.software.proprietary.security.service.EmailService.applicationProperties<br/>Local variable named applicationProperties<br/>At EmailService.java:[line 26]<br/>At EmailService.java:[line 26]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.JwtService(boolean, KeyPersistenceServiceInterface) may expose internal representation by storing an externally mutable object into JwtService.keyPersistenceService<br/>
+                  <br/>
+                  <br/>In file JwtService.java JwtService.java,
+					
+						line 60 60<br/>In class stirling.software.proprietary.security.service.JwtService<br/>In method new stirling.software.proprietary.security.service.JwtService(boolean, KeyPersistenceServiceInterface)<br/>Field stirling.software.proprietary.security.service.JwtService.keyPersistenceService<br/>Local variable named keyPersistenceService<br/>At JwtService.java:[line 60]<br/>At JwtService.java:[line 60]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.KeyPairCleanupService(KeyPersistenceService, ApplicationProperties) may expose internal representation by storing an externally mutable object into KeyPairCleanupService.keyPersistenceService<br/>
+                  <br/>
+                  <br/>In file KeyPairCleanupService.java KeyPairCleanupService.java,
+					
+						line 35 35<br/>In class stirling.software.proprietary.security.service.KeyPairCleanupService<br/>In method new stirling.software.proprietary.security.service.KeyPairCleanupService(KeyPersistenceService, ApplicationProperties)<br/>Field stirling.software.proprietary.security.service.KeyPairCleanupService.keyPersistenceService<br/>Local variable named keyPersistenceService<br/>At KeyPairCleanupService.java:[line 35]<br/>At KeyPairCleanupService.java:[line 35]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.LoginAttemptService(ApplicationProperties) may expose internal representation by storing an externally mutable object into LoginAttemptService.applicationProperties<br/>
+                  <br/>
+                  <br/>In file LoginAttemptService.java LoginAttemptService.java,
+					
+						line 19 19<br/>In class stirling.software.proprietary.security.service.LoginAttemptService<br/>In method new stirling.software.proprietary.security.service.LoginAttemptService(ApplicationProperties)<br/>Field stirling.software.proprietary.security.service.LoginAttemptService.applicationProperties<br/>Local variable named applicationProperties<br/>At LoginAttemptService.java:[line 19]<br/>At LoginAttemptService.java:[line 19]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.UserService(UserRepository, TeamRepository, AuthorityRepository, PasswordEncoder, MessageSource, SessionPersistentRegistry, DatabaseServiceInterface, ApplicationProperties$Security$OAUTH2) may expose internal representation by storing an externally mutable object into UserService.databaseService<br/>
+                  <br/>
+                  <br/>In file UserService.java UserService.java,
+					
+						line 48 48<br/>In class stirling.software.proprietary.security.service.UserService<br/>In method new stirling.software.proprietary.security.service.UserService(UserRepository, TeamRepository, AuthorityRepository, PasswordEncoder, MessageSource, SessionPersistentRegistry, DatabaseServiceInterface, ApplicationProperties$Security$OAUTH2)<br/>Field stirling.software.proprietary.security.service.UserService.databaseService<br/>Local variable named databaseService<br/>At UserService.java:[line 48]<br/>At UserService.java:[line 48]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.UserService(UserRepository, TeamRepository, AuthorityRepository, PasswordEncoder, MessageSource, SessionPersistentRegistry, DatabaseServiceInterface, ApplicationProperties$Security$OAUTH2) may expose internal representation by storing an externally mutable object into UserService.oAuth2<br/>
+                  <br/>
+                  <br/>In file UserService.java UserService.java,
+					
+						line 48 48<br/>In class stirling.software.proprietary.security.service.UserService<br/>In method new stirling.software.proprietary.security.service.UserService(UserRepository, TeamRepository, AuthorityRepository, PasswordEncoder, MessageSource, SessionPersistentRegistry, DatabaseServiceInterface, ApplicationProperties$Security$OAUTH2)<br/>Field stirling.software.proprietary.security.service.UserService.oAuth2<br/>Local variable named oAuth2<br/>At UserService.java:[line 48]<br/>At UserService.java:[line 48]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.service.UserService(UserRepository, TeamRepository, AuthorityRepository, PasswordEncoder, MessageSource, SessionPersistentRegistry, DatabaseServiceInterface, ApplicationProperties$Security$OAUTH2) may expose internal representation by storing an externally mutable object into UserService.sessionRegistry<br/>
+                  <br/>
+                  <br/>In file UserService.java UserService.java,
+					
+						line 48 48<br/>In class stirling.software.proprietary.security.service.UserService<br/>In method new stirling.software.proprietary.security.service.UserService(UserRepository, TeamRepository, AuthorityRepository, PasswordEncoder, MessageSource, SessionPersistentRegistry, DatabaseServiceInterface, ApplicationProperties$Security$OAUTH2)<br/>Field stirling.software.proprietary.security.service.UserService.sessionRegistry<br/>Local variable named sessionRegistry<br/>At UserService.java:[line 48]<br/>At UserService.java:[line 48]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.session.CustomHttpSessionListener(SessionPersistentRegistry) may expose internal representation by storing an externally mutable object into CustomHttpSessionListener.sessionPersistentRegistry<br/>
+                  <br/>
+                  <br/>In file CustomHttpSessionListener.java CustomHttpSessionListener.java,
+					
+						line 18 18<br/>In class stirling.software.proprietary.security.session.CustomHttpSessionListener<br/>In method new stirling.software.proprietary.security.session.CustomHttpSessionListener(SessionPersistentRegistry)<br/>Field stirling.software.proprietary.security.session.CustomHttpSessionListener.sessionPersistentRegistry<br/>Local variable named sessionPersistentRegistry<br/>At CustomHttpSessionListener.java:[line 18]<br/>At CustomHttpSessionListener.java:[line 18]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.security.session.SessionScheduled(SessionPersistentRegistry) may expose internal representation by storing an externally mutable object into SessionScheduled.sessionPersistentRegistry<br/>
+                  <br/>
+                  <br/>In file SessionScheduled.java SessionScheduled.java,
+					
+						line 15 15<br/>In class stirling.software.proprietary.security.session.SessionScheduled<br/>In method new stirling.software.proprietary.security.session.SessionScheduled(SessionPersistentRegistry)<br/>Field stirling.software.proprietary.security.session.SessionScheduled.sessionPersistentRegistry<br/>Local variable named sessionPersistentRegistry<br/>At SessionScheduled.java:[line 15]<br/>At SessionScheduled.java:[line 15]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new stirling.software.proprietary.service.AuditCleanupService(PersistentAuditEventRepository, AuditConfigurationProperties) may expose internal representation by storing an externally mutable object into AuditCleanupService.auditRepository<br/>
+                  <br/>
+                  <br/>In file AuditCleanupService.java AuditCleanupService.java,
+					
+						line 23 23<br/>In class stirling.software.proprietary.service.AuditCleanupService<br/>In method new stirling.software.proprietary.service.AuditCleanupService(PersistentAuditEventRepository, AuditConfigurationProperties)<br/>Field stirling.software.proprietary.service.AuditCleanupService.auditRepository<br/>Local variable named auditRepository<br/>At AuditCleanupService.java:[line 23]<br/>At AuditCleanupService.java:[line 23]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_MT_CORRECTNESS">Multithreaded correctness Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION">Sequence of calls to concurrent abstraction may not be atomic</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Sequence of calls to java.util.concurrent.ConcurrentHashMap may not be atomic in stirling.software.proprietary.security.service.LoginAttemptService.loginFailed(String)<br/>
+                  <br/>
+                  <br/>In file LoginAttemptService.java,
+					
+						line 61<br/>In class stirling.software.proprietary.security.service.LoginAttemptService<br/>In method stirling.software.proprietary.security.service.LoginAttemptService.loginFailed(String)<br/>Type java.util.concurrent.ConcurrentHashMap<br/>Called method java.util.concurrent.ConcurrentHashMap.put(Object, Object)<br/>At LoginAttemptService.java:[line 61]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_STYLE">Dodgy code Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Possible null pointer dereference due to return value of called method</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Possible null pointer dereference in stirling.software.proprietary.security.service.DatabaseService.getBackupList() due to return value of called method<br/>
+                  <br/>
+                  <br/>In file DatabaseService.java DatabaseService.java,
+					
+						line 142 142<br/>In class stirling.software.proprietary.security.service.DatabaseService<br/>In method stirling.software.proprietary.security.service.DatabaseService.getBackupList()<br/>Local variable stored in JVM register ?<br/>Dereferenced at DatabaseService.java:[line 142]<br/>Known null at DatabaseService.java:[line 142]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Possible null pointer dereference due to return value of called method</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Possible null pointer dereference in stirling.software.proprietary.security.service.DatabaseService.moveBackupFiles() due to return value of called method<br/>
+                  <br/>
+                  <br/>In file DatabaseService.java DatabaseService.java,
+					
+						line 79 79<br/>In class stirling.software.proprietary.security.service.DatabaseService<br/>In method stirling.software.proprietary.security.service.DatabaseService.moveBackupFiles()<br/>Local variable stored in JVM register ?<br/>Dereferenced at DatabaseService.java:[line 79]<br/>Known null at DatabaseService.java:[line 79]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Possible null pointer dereference due to return value of called method</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Possible null pointer dereference in stirling.software.proprietary.security.service.DatabaseService.moveBackupFiles() due to return value of called method<br/>
+                  <br/>
+                  <br/>In file DatabaseService.java DatabaseService.java,
+					
+						line 80 80<br/>In class stirling.software.proprietary.security.service.DatabaseService<br/>In method stirling.software.proprietary.security.service.DatabaseService.moveBackupFiles()<br/>Local variable stored in JVM register ?<br/>Dereferenced at DatabaseService.java:[line 80]<br/>Known null at DatabaseService.java:[line 80]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Redundant nullcheck of value known to be non-null</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Redundant nullcheck of authentication, which is known to be non-null in stirling.software.proprietary.security.filter.UserAuthenticationFilter.doFilterInternal(HttpServletRequest, HttpServletResponse, FilterChain)<br/>
+                  <br/>
+                  <br/>In file UserAuthenticationFilter.java UserAuthenticationFilter.java,
+					
+						line 129 129<br/>In class stirling.software.proprietary.security.filter.UserAuthenticationFilter<br/>In method stirling.software.proprietary.security.filter.UserAuthenticationFilter.doFilterInternal(HttpServletRequest, HttpServletResponse, FilterChain)<br/>Value loaded from authentication<br/>Redundant null check at UserAuthenticationFilter.java:[line 129]<br/>Redundant null check at UserAuthenticationFilter.java:[line 129]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#SF_SWITCH_NO_DEFAULT">Switch statement found where default case is missing</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Switch statement found in stirling.software.proprietary.security.config.AccountWebController.account(HttpServletRequest, Model, Authentication) where default case is missing<br/>
+                  <br/>
+                  <br/>In file AccountWebController.java AccountWebController.java,
+					
+						lines 417 417
+						    to 422 422<br/>In class stirling.software.proprietary.security.config.AccountWebController<br/>In method stirling.software.proprietary.security.config.AccountWebController.account(HttpServletRequest, Model, Authentication)<br/>At AccountWebController.java:[lines 417-422]<br/>At AccountWebController.java:[lines 417-422]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#SF_SWITCH_NO_DEFAULT">Switch statement found where default case is missing</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Switch statement found in stirling.software.proprietary.security.config.AccountWebController.login(HttpServletRequest, Model, Authentication) where default case is missing<br/>
+                  <br/>
+                  <br/>In file AccountWebController.java AccountWebController.java,
+					
+						lines 155 155
+						    to 158 158<br/>In class stirling.software.proprietary.security.config.AccountWebController<br/>In method stirling.software.proprietary.security.config.AccountWebController.login(HttpServletRequest, Model, Authentication)<br/>At AccountWebController.java:[lines 155-158]<br/>At AccountWebController.java:[lines 155-158]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#SF_SWITCH_NO_DEFAULT">Switch statement found where default case is missing</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Switch statement found in stirling.software.proprietary.security.filter.JwtAuthenticationFilter.processUserAuthenticationType(Map, String) where default case is missing<br/>
+                  <br/>
+                  <br/>In file JwtAuthenticationFilter.java JwtAuthenticationFilter.java,
+					
+						lines 180 180
+						    to 190 190<br/>In class stirling.software.proprietary.security.filter.JwtAuthenticationFilter<br/>In method stirling.software.proprietary.security.filter.JwtAuthenticationFilter.processUserAuthenticationType(Map, String)<br/>At JwtAuthenticationFilter.java:[lines 180-190]<br/>At JwtAuthenticationFilter.java:[lines 180-190]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h1>
+         <a name="Details">Warning Types</a>
+      </h1>
+      <h2>
+         <a name="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION">Sequence of calls to concurrent abstraction may not be atomic</a>
+      </h2>
+          
+        <p>This code contains a sequence of calls to a concurrent  abstraction
+            (such as a concurrent hash map).
+            These calls will not be executed atomically.
+          
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="CT_CONSTRUCTOR_THROW">Be wary of letting constructors throw exceptions.</a>
+      </h2>
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="DM_EXIT">Method invokes System.exit(...)</a>
+      </h2>
+
+  <p> Invoking System.exit shuts down the entire Java virtual machine. This
+   should only been done when it is appropriate. Such calls make it
+   hard or impossible for your code to be invoked by other code.
+   Consider throwing a RuntimeException instead.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+      </h2>
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+      </h2>
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+      </h2>
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="NP_OPTIONAL_RETURN_NULL">Method with Optional return type returns explicit null</a>
+      </h2>
+       
+       <p>
+    The usage of Optional return type (java.util.Optional or com.google.common.base.Optional)
+    always means that explicit null returns were not desired by design.
+    Returning a null value in such case is a contract violation and will most likely break client code.
+       </p>
+       
+       <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Possible null pointer dereference due to return value of called method</a>
+      </h2>
+      
+<p> The return value from a method is dereferenced without a null check,
+and the return value of that method is one that should generally be checked
+for null.  This may lead to a <code>NullPointerException</code> when the code is executed.
+</p>
+      
+   <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="NP_NULL_ON_SOME_PATH_EXCEPTION">Possible null pointer dereference in method on exception path</a>
+      </h2>
+
+<p> A reference value which is null on some exception control path is
+dereferenced here.&nbsp; This may lead to a <code>NullPointerException</code>
+when the code is executed.&nbsp;
+Note that because SpotBugs currently does not prune infeasible exception paths,
+this may be a false warning.</p>
+
+<p> Also note that SpotBugs considers the default case of a switch statement to
+be an exception path, since the default case is often infeasible.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">Nullcheck of value previously dereferenced</a>
+      </h2>
+
+<p> A value is checked here to see whether it is null, but this value cannot
+be null because it was previously dereferenced and if it were null a null pointer
+exception would have occurred at the earlier dereference.
+Essentially, this code and the previous dereference
+disagree as to whether this value is allowed to be null. Either the check is redundant
+or the previous dereference is erroneous.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Redundant nullcheck of value known to be non-null</a>
+      </h2>
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">Method ignores exceptional return value</a>
+      </h2>
+
+   <p> This method returns a value that is not checked. The return value should be checked
+since it can indicate an unusual or unexpected function execution. For
+example, the <code>File.delete()</code> method returns false
+if the file could not be successfully deleted (rather than
+throwing an Exception).
+If you don't check the result, you won't notice if the method invocation
+signals unexpected behavior by returning an atypical return value.
+</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="SF_SWITCH_NO_DEFAULT">Switch statement found where default case is missing</a>
+      </h2>
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+   </body>
+</html>
