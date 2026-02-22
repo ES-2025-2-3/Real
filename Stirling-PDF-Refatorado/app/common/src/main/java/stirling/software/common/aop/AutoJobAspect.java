@@ -1,0 +1,335 @@
+package stirling.software.common.aop;
+
+import java.io.IOException;
+import java.time.Duration;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicReference;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+import stirling.software.common.annotations.AutoJobPostMapping;
+import stirling.software.common.model.api.PDFFile;
+import stirling.software.common.service.FileStorage;
+import stirling.software.common.service.JobExecutorService;
+
+@Aspect
+@Component
+@RequiredArgsConstructor
+@Slf4j
+@Order(0) // Highest precedence - executes before audit aspects
+public class AutoJobAspect {
+
+    private static final Duration RETRY_BASE_DELAY = Duration.ofMillis(100);
+
+    private final JobExecutorService jobExecutorService;
+    private final HttpServletRequest request;
+    private final FileStorage fileStorage;
+
+    @Around("@annotation(autoJobPostMapping)")
+    public Object wrapWithJobExecution(
+            ProceedingJoinPoint joinPoint, AutoJobPostMapping autoJobPostMapping) throws Exception {
+
+        boolean async = extractAsyncFlag();
+        logExecutionStart(async);
+
+        JobExecutionConfig config = buildExecutionConfig(autoJobPostMapping);
+
+        Object[] args = processArgsInPlace(joinPoint.getArgs(), async);
+
+        if (config.retryCount() <= 1) {
+            return executeSingleRun(joinPoint, args, async, config);
+        }
+
+        return executeWithRetries(
+                joinPoint,
+                args,
+                async,
+                config.timeout(),
+                config.retryCount(),
+                config.trackProgress(),
+                config.queueable(),
+                config.resourceWeight());
+    }
+
+    private boolean extractAsyncFlag() {
+        String asyncParam = request.getParameter("async");
+        return Boolean.parseBoolean(asyncParam);
+    }
+
+    private JobExecutionConfig buildExecutionConfig(AutoJobPostMapping mapping) {
+
+        long timeout = mapping.timeout();
+        int retryCount = mapping.retryCount();
+        boolean trackProgress = mapping.trackProgress();
+        boolean queueable = mapping.queueable();
+
+        int resourceWeight = Math.max(1, Math.min(100, mapping.resourceWeight()));
+
+        logExecutionDetails(timeout, retryCount, trackProgress);
+
+        return new JobExecutionConfig(
+                timeout, retryCount, trackProgress, queueable, resourceWeight);
+    }
+
+    private void logExecutionStart(boolean async) {
+        if (log.isDebugEnabled()) {
+            log.debug(
+                    "AutoJobAspect: Processing {} {} with async={}",
+                    request.getMethod(),
+                    request.getRequestURI(),
+                    async);
+        }
+    }
+
+    private void logExecutionDetails(long timeout, int retryCount, boolean trackProgress) {
+        if (log.isDebugEnabled()) {
+            log.debug(
+                    "AutoJobPostMapping execution with async={}, timeout={}, retryCount={}, trackProgress={}",
+                    Boolean.parseBoolean(request.getParameter("async")),
+                    timeout > 0 ? timeout : "default",
+                    retryCount,
+                    trackProgress);
+        }
+    }
+
+    private Object executeSingleRun(
+            ProceedingJoinPoint joinPoint,
+            Object[] args,
+            boolean async,
+            JobExecutionConfig config) {
+
+        return jobExecutorService.runJobGeneric(
+                async,
+                () -> executeJoinPoint(joinPoint, args),
+                config.timeout(),
+                config.queueable(),
+                config.resourceWeight());
+    }
+
+    private Object executeJoinPoint(ProceedingJoinPoint joinPoint, Object[] args) {
+
+        try {
+            return joinPoint.proceed(args);
+        } catch (Throwable ex) {
+
+            log.error(
+                    "AutoJobAspect caught exception during job execution: {}", ex.getMessage(), ex);
+
+            if (ex instanceof RuntimeException runtimeEx) {
+                throw runtimeEx;
+            }
+
+            throw new RuntimeException(ex);
+        }
+    }
+
+    private record JobExecutionConfig(
+            long timeout,
+            int retryCount,
+            boolean trackProgress,
+            boolean queueable,
+            int resourceWeight) {}
+
+    private Object executeWithRetries(
+            ProceedingJoinPoint joinPoint,
+            Object[] args,
+            boolean async,
+            long timeout,
+            int maxRetries,
+            boolean trackProgress,
+            boolean queueable,
+            int resourceWeight)
+            throws Exception {
+
+        // Keep jobId reference for progress tracking in TaskManager
+        AtomicReference<String> jobIdRef = new AtomicReference<>();
+
+        return jobExecutorService.runJobGeneric(
+                async,
+                () -> {
+                    // Use iterative approach instead of recursion to avoid stack overflow
+                    Throwable lastException = null;
+
+                    // Attempt counter starts at 1 for first try
+                    for (int currentAttempt = 1; currentAttempt <= maxRetries; currentAttempt++) {
+                        try {
+                            if (trackProgress && async) {
+                                // Get jobId for progress tracking in TaskManager
+                                // This enables REST API progress queries, not WebSocket
+                                if (jobIdRef.get() == null) {
+                                    jobIdRef.set(getJobIdFromContext());
+                                }
+                                String jobId = jobIdRef.get();
+                                if (jobId != null) {
+                                    log.debug(
+                                            "Tracking progress for job {} (attempt {}/{})",
+                                            jobId,
+                                            currentAttempt,
+                                            maxRetries);
+                                    // Progress is tracked in TaskManager for REST API access
+                                    // No WebSocket notifications sent here
+                                }
+                            }
+
+                            // Attempt to execute the operation
+                            return joinPoint.proceed(args);
+
+                        } catch (Throwable ex) {
+                            lastException = ex;
+                            log.error(
+                                    "AutoJobAspect caught exception during job execution (attempt"
+                                            + " {}/{}): {}",
+                                    currentAttempt,
+                                    maxRetries,
+                                    ex.getMessage(),
+                                    ex);
+
+                            // Check if we should retry
+                            if (currentAttempt < maxRetries) {
+                                log.info(
+                                        "Retrying operation, attempt {}/{}",
+                                        currentAttempt + 1,
+                                        maxRetries);
+
+                                if (trackProgress && async) {
+                                    String jobId = jobIdRef.get();
+                                    if (jobId != null) {
+                                        log.debug(
+                                                "Recording retry attempt for job {} in TaskManager",
+                                                jobId);
+                                        // Retry info is tracked in TaskManager for REST API access
+                                    }
+                                }
+
+                                // Use non-blocking delay for all retry attempts to avoid blocking
+                                // threads
+                                // For sync jobs this avoids starving the tomcat thread pool under
+                                // load
+                                long delayMs = RETRY_BASE_DELAY.toMillis() * currentAttempt;
+
+                                // Execute the retry after a delay through the JobExecutorService
+                                // rather than blocking the current thread with sleep
+                                CompletableFuture<Object> delayedRetry = new CompletableFuture<>();
+
+                                // Use a delayed executor for non-blocking delay
+                                CompletableFuture.delayedExecutor(delayMs, TimeUnit.MILLISECONDS)
+                                        .execute(
+                                                () -> {
+                                                    // Continue the retry loop in the next iteration
+                                                    // We can't return from here directly since
+                                                    // we're in a Runnable
+                                                    delayedRetry.complete(null);
+                                                });
+
+                                // Wait for the delay to complete before continuing
+                                try {
+                                    delayedRetry.join();
+                                } catch (Exception e) {
+                                    Thread.currentThread().interrupt();
+                                    break;
+                                }
+                            } else {
+                                // No more retries, we'll throw the exception after the loop
+                                break;
+                            }
+                        }
+                    }
+
+                    // If we get here, all retries failed
+                    if (lastException != null) {
+                        // Rethrow RuntimeException as-is to preserve exception type
+                        if (lastException instanceof RuntimeException) {
+                            throw (RuntimeException) lastException;
+                        }
+                        // Wrap checked exceptions - GlobalExceptionHandler will unwrap
+                        // BaseAppException
+                        throw new RuntimeException(
+                                "Job failed after "
+                                        + maxRetries
+                                        + " attempts: "
+                                        + lastException.getMessage(),
+                                lastException);
+                    }
+
+                    // This should never happen if lastException is properly tracked
+                    throw new RuntimeException("Job failed but no exception was recorded");
+                },
+                timeout,
+                queueable,
+                resourceWeight);
+    }
+
+    /**
+     * Processes arguments in-place to handle file resolution and async file persistence. This
+     * approach avoids type mismatch issues by modifying the original objects directly.
+     *
+     * @param originalArgs The original arguments
+     * @param async Whether this is an async operation
+     * @return The original array with processed arguments
+     */
+    private Object[] processArgsInPlace(Object[] originalArgs, boolean async) {
+        if (originalArgs == null || originalArgs.length == 0) {
+            return originalArgs;
+        }
+
+        // Process all arguments in-place
+        for (int i = 0; i < originalArgs.length; i++) {
+            Object arg = originalArgs[i];
+
+            if (arg instanceof PDFFile pdfFile) {
+                // Case 1: fileId is provided but no fileInput
+                if (pdfFile.getFileInput() == null && pdfFile.getFileId() != null) {
+                    try {
+                        log.debug("Using fileId {} to get file content", pdfFile.getFileId());
+                        MultipartFile file = fileStorage.retrieveFile(pdfFile.getFileId());
+                        pdfFile.setFileInput(file);
+                    } catch (Exception e) {
+                        throw new RuntimeException(
+                                "Failed to resolve file by ID: " + pdfFile.getFileId(), e);
+                    }
+                }
+                // Case 2: For async requests, we need to make a copy of the MultipartFile
+                else if (async && pdfFile.getFileInput() != null) {
+                    try {
+                        log.debug("Making persistent copy of uploaded file for async processing");
+                        MultipartFile originalFile = pdfFile.getFileInput();
+                        String fileId = fileStorage.storeFile(originalFile);
+
+                        // Store the fileId for later reference
+                        pdfFile.setFileId(fileId);
+
+                        // Replace the original MultipartFile with our persistent copy
+                        MultipartFile persistentFile = fileStorage.retrieveFile(fileId);
+                        pdfFile.setFileInput(persistentFile);
+
+                        log.debug("Created persistent file copy with fileId: {}", fileId);
+                    } catch (IOException e) {
+                        throw new RuntimeException(
+                                "Failed to create persistent copy of uploaded file", e);
+                    }
+                }
+            }
+        }
+
+        return originalArgs;
+    }
+
+    private String getJobIdFromContext() {
+        try {
+            return (String) request.getAttribute("jobId");
+        } catch (Exception e) {
+            log.debug("Could not retrieve job ID from context: {}", e.getMessage());
+            return null;
+        }
+    }
+}
